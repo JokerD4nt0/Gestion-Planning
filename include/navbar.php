@@ -20,35 +20,33 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li <?=echoActiveClassIfRequestMatches("accueil")?>>
+				<li <?php echoActiveClassIfRequestMatches("accueil");?>>
 					<a href="accueil.php">Accueil</a>
 				</li>
-				<li
-				<?=echoActiveClassIfRequestMatches("ajoutSalarie")?>
-				<?=echoActiveClassIfRequestMatches("modifSalarie")?>
-				<?=echoActiveClassIfRequestMatches("supprSalarie")?>
-				class="dropdown">
+				<li class="dropdown"
+				<?php
+				echoActiveClassIfRequestMatches("ajoutSalarie");
+				echoActiveClassIfRequestMatches("modifSalarie");
+				echoActiveClassIfRequestMatches("supprSalarie");
+				?>>
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion du personnel <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Ajout</li>
-							<li <?=echoActiveClassIfRequestMatches("ajoutSalarie")?>><a href="ajoutSalarie.php">Ajouter un salarié</a></li>
-							<!--<li><a href="ajoutPersonneExterne.php">Ajouter une personne externe</a></li>-->
+							<li <?php echoActiveClassIfRequestMatches("ajoutSalarie");?>><a href="ajoutSalarie.php">Ajouter un salarié</a></li>
 						
 						<li class="divider"></li>
 						
 						<li class="dropdown-header">Modification</li>
-							<li <?=echoActiveClassIfRequestMatches("modifSalarie")?>><a href="modifSalarie.php">Modification d'un salarié</a></li>
-							<!--<li><a href="modifPersonneExterne.php">Modification d'une personne externe</a></li>-->
+							<li <?php echoActiveClassIfRequestMatches("modifSalarie");?>><a href="modifSalarie.php">Modification d'un salarié</a></li>
 						
 						<li class="divider"></li>
 						
 						<li class="dropdown-header">Suppression</li>
-							<li <?=echoActiveClassIfRequestMatches("supprSalarie")?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
-							<!--<li><a href="supprPersonneExterne.php">Suppression d'une personne externe</a></li>-->
+							<li <?php echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
 					</ul>
 					
 				</li>
-				<li <?=echoActiveClassIfRequestMatches("planning")?>>
+				<li <?php echoActiveClassIfRequestMatches("planning");?>>
 					<a href="planning.php">Planning</a>
 				</li>
 			</ul>
