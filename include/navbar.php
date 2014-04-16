@@ -23,12 +23,12 @@
 				<li <?php echoActiveClassIfRequestMatches("accueil");?>>
 					<a href="accueil.php">Accueil</a>
 				</li>
-				<li class="dropdown"
+				<li 
 				<?php
 				echoActiveClassIfRequestMatches("ajoutSalarie");
 				echoActiveClassIfRequestMatches("modifSalarie");
 				echoActiveClassIfRequestMatches("supprSalarie");
-				?>>
+				?> class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion du personnel <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Ajout</li>
