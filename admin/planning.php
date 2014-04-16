@@ -18,21 +18,25 @@
 Quand on rentre l'ID d'un salarié, son planning ce génère automatiquement en fonction de ses heures de travaiiles-->
 	<div class="span9">
 		<legend>EN TRAVAUX !</legend>
-			<?php
-				$reponse = $bdd->query('SELECT * FROM planning');
-				while($donnees = $reponse->fetch()){
-			?>
-				<p>
-					<b>Jour :</b> <?php echo htmlspecialchars($donnees['jourPlanning']);?><br/>
-					<b>Mois :</b> <?php echo htmlspecialchars($donnees['moisPlanning']);?><br/>
-					<b>Année :</b> <?php echo htmlspecialchars($donnees['anneePlanning']);?><br/>
-					<b>Heure :</b> <?php echo htmlspecialchars($donnees['heurePlanning']);?><br/>
-					<b>Numéro de salarié :</b> <?php echo htmlspecialchars($donnees['idSalarie']);?><br/>
-				</p>
-			<?php
-				}
-				$reponse->closeCursor();
-			?>
+			<table>
+				<tr>
+					<?php
+						$reponse = $bdd->query('SELECT * FROM planning');
+						while($donnees = $reponse->fetch()){
+					?>
+					<p>
+						<td><b>Jour :</b> <?php echo htmlspecialchars($donnees['jourPlanning']);?><br/></td>
+						<td><b>Mois :</b> <?php echo htmlspecialchars($donnees['moisPlanning']);?><br/></td>
+						<td><b>Année :</b> <?php echo htmlspecialchars($donnees['anneePlanning']);?><br/></td>
+						<td><b>Heure :</b> <?php echo htmlspecialchars($donnees['heurePlanning']);?><br/></td>
+						<td><b>Numéro de salarié :</b> <?php echo htmlspecialchars($donnees['idSalarie']);?><br/></td>
+					</p>
+					<?php
+						}
+						$reponse->closeCursor();
+					?>
+				</tr>
+			</table>
 			<a href="accueil.php" class="btn btn-primary">Retour à l'accueil</a>		
 	</div>
 <?php 
