@@ -18,7 +18,7 @@
 					<a href="vues/vueRecrutement.php">Recrutement</a>
 				</li>
 				<li>
-					<a href="public/administration.php">Administration</a>
+					<a href="vues/vueContainerAdministration.php">Administration</a>
 				</li>
 			</ul>
 		</div><!--/.nav-collapse -->

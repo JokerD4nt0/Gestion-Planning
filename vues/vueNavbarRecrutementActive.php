@@ -15,10 +15,10 @@
 					<a href="../index.php">Accueil</a>
 				</li>
 				<li class="active">
-					<a href="recrutement.php">Recrutement</a>
+					<a href="vueRecrutement.php">Recrutement</a>
 				</li>
 				<li>
-					<a href="administration.php">Administration</a>
+					<a href="vueContaineradministration.php">Administration</a>
 				</li>
 			</ul>
 		</div><!--/.nav-collapse -->

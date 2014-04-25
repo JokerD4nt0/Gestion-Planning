@@ -1,7 +1,10 @@
+<?php
+require_once"../vues/vueHeaderAdmin.php";
+?>
 <body>
     <div class="container">
 
-      <form class="form-signin" method="POST" action="administration.php">
+      <form class="form-signin" method="POST" action="vueAdministration.php">
         <h2 class="form-signin-heading">Veuillez vous authentifier</h2>
         <input name="emailSalarie" type="text" class="form-control" placeholder="Authentifiant" autofocus>
         <input name="mdpSalarie" type="password" class="form-control" placeholder="Mot de passe">
@@ -13,3 +16,7 @@
 	<a href="../index.php" class="btn btn-info">Retour à l'accueil</a>
     </div> <!-- /container -->
 </body>
+<?php
+	require_once"../vues/vueJavascript.php";
+	require_once"../vues/vueFooter.php";
+?>

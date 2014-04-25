@@ -1,3 +1,7 @@
+<?php
+	require_once"../vues/vueHeader.php";
+	require_once"../vues/vueNavbarRecrutementActive.php";
+?>
 <div class="container">
 		<form action="envoiMail.php" method="POST">
 			<legend>Candidature</legend>
@@ -22,3 +26,7 @@
 				</fieldset>
 		</form>
 </div>
+<?php
+	require_once"../vues/vueJavascript.php";
+	require_once"../vues/vueFooter.php";
+?>
