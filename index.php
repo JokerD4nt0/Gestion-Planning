@@ -1,7 +1,7 @@
 <?php
-	include_once"include/headerIndex.php";
-	include_once"include/navbarIndexActive.php";
-	include_once"include/container.php";
-	include_once"include/javascript.php";
-	include_once"include/footer.php";
+	require_once"vues/vueHeaderIndex.php";
+	require_once"vues/vueNavbarIndexActive.php";
+	require_once"vues/vueContainer.php";
+	require_once"vues/vueJavascript.php";
+	require_once"vues/vueFooter.php";
 ?>
