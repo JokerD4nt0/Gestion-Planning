@@ -1,0 +1,58 @@
+/* = Aligner les champs veritcalement sur la droite */
+input , select
+{
+	display: block;
+	width: 150px;
+	float: right;
+}
+
+/* = Couleur du titre du form + <p>*/
+legend
+{
+	color:#DF3F3F;
+	font-size:21px;
+	font-weight:bold;
+}
+
+h1
+{
+	color:green;
+	font-size:15px;
+	font-weight:bold;
+}
+
+table
+{
+	border:1px solid black;
+}
+
+td
+{
+	border:1px solid black;
+	width:200px;
+}
+
+/* = Positionnement des block-form */
+#block-form
+{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#block-form
+{
+    display: table-cell;
+    vertical-align: top;
+    height: 50px;
+    border: 1px solid red;
+}
+
+/* = Bande couleur pour <p> */
+p.band
+{
+	background: #DF3F3F none;
+	color: white;
+	font-weight: bold;
+}
