@@ -1,7 +1,8 @@
 <?php
-	require_once"vues/vueHeaderIndex.php";
-	require_once"vues/vueNavbarIndexActive.php";
-	require_once"vues/vueContainer.php";
-	require_once"vues/vueJavascript.php";
-	require_once"vues/vueFooter.php";
+	if (!empty($_GET['page']) && is_file('controleurs/Cnt'.$_GET['page'].'.php')){
+		require_once 'controleurs/Cnt'.$_GET['page'].'.php';
+	}
+	else{
+	require_once 'controleurs/CntIndex.php';
+	}
 ?>
