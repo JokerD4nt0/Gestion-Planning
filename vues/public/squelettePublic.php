@@ -6,7 +6,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Humanity Sport</title>
+		<title>Development Company</title>
 		
 		<!-- Links -->
 			<!-- Favicon -->
@@ -35,7 +35,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="index.php">Humanity Sport</a>
+			<a class="navbar-brand" href="index.php">Development Company</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
@@ -59,7 +59,7 @@
 	<footer>
 		<hr/>
 		<div class="container">
-			<p>Copyright 2013-2014 © Humanity Sport, Tous droits réservés.</p>
+			<p>Copyright 2013-2014 © Development Company, Tous droits réservés.</p>
 		</div>
 	</footer>
 </html>
