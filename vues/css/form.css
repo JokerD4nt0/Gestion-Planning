@@ -1,4 +1,4 @@
-/* = Aligner les champs veritcalement sur la droite */
+/* = Aligner les champs verticalement sur la droite */
 input , select
 {
 	display: block;
@@ -9,15 +9,15 @@ input , select
 /* = Couleur du titre du form + <p>*/
 legend
 {
-	color:#DF3F3F;
-	font-size:21px;
+	color:green;
+	font-size:17px;
 	font-weight:bold;
 }
 
 h1
 {
-	color:green;
-	font-size:15px;
+	color:#DF3F3F;
+	font-size:20px;
 	font-weight:bold;
 }
 
