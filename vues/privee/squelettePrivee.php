@@ -61,17 +61,17 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion du personnel <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="dropdown-header">Ajout</li>
-							<li <?php echoActiveClassIfRequestMatches("ajoutSalarie");?>><a href="ajoutSalarie.php">Ajouter un salarié</a></li>
+							<li <?php echoActiveClassIfRequestMatches("ajoutSalarie");?>><a href="ajoutSalarie.php">Ajouter un salariÃ©</a></li>
 						
 						<li class="divider"></li>
 						
 						<li class="dropdown-header">Modification</li>
-							<li <?php echoActiveClassIfRequestMatches("modifSalarie");?>><a href="modifSalarie.php">Modification d'un salarié</a></li>
+							<li <?php echoActiveClassIfRequestMatches("modifSalarie");?>><a href="modifSalarie.php">Modification d'un salariÃ©</a></li>
 						
 						<li class="divider"></li>
 						
 						<li class="dropdown-header">Suppression</li>
-							<li <?php echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
+							<li <?php echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salariÃ©</a></li>
 					</ul>
 					
 				</li>
@@ -82,7 +82,7 @@
 			<ul class ="nav navbar-nav navbar-right">
 				<li>Bienvenue <?php echo $_SESSION['emailSalarie']?> !</li>
 				<li>
-					<a href="../controleurs/CntsessionDestroy.php">Déconnexion</a>
+					<a href="../controleurs/CntsessionDestroy.php">DÃ©connexion</a>
 				</li>
 			</ul>
 		</div><!--/.nav-collapse -->
@@ -93,38 +93,38 @@
 <!-- Placed at the end of the document so the pages load faster -->
 	<!-- Contenu -->
 	<div class="span9">
-		<legend>Dernières Mises à jour du logiciel Gestion RH :</legend>
+		<legend>DerniÃ¨res Mises Ã  jour du logiciel Gestion RH :</legend>
 		<p>
 				Humanity Sport v0.17le<br/>
 				<br/>
 				+ corrections mineurs
 				<br/>
-				+ ajout de la fonction "Déconnexion"
+				+ ajout de la fonction "DÃ©connexion"
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				Humanity Sport v0.16le<br/>
 				<br/>
 				+ corrections mineurs
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				Humanity Sport v0.15le<br/>
 				<br/>
 				+ corrections mineurs (supprSalarie.php et supprSalarie_POST fonctionnels)
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				Humanity Sport v0.14le<br/>
 				<br/>
 				+ corrections mineurs<br/>
-				+ GestionRH se nomme désormais HumanitySport !
+				+ GestionRH se nomme dÃ©sormais HumanitySport !
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				GestionRH v0.13<br/>
 				<br/>
@@ -132,51 +132,51 @@
 				+ suppression en javacsript inclut !
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				GestionRH v0.12<br/>
 				<br/>
 				+ corrections mineurs
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				<br/>
 				GestionRH v0.11<br/>
 				<br/>
-				+ modifUtilisateur.php & modifUtilisateur_POST.php terminés !!
+				+ modifUtilisateur.php & modifUtilisateur_POST.php terminÃ©s !!
 				<br/>
-				- Dans Salarié, la date doit être sous forme jj-mm-aaaa, et non aaaa-mm-jj
+				- Dans SalariÃ©, la date doit Ãªtre sous forme jj-mm-aaaa, et non aaaa-mm-jj
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				<br/>
 				GestionRH v0.10<br/>
 				<br/>
-				+ supprSalarie.php et supprPersonneExterne.php terminés !!
+				+ supprSalarie.php et supprPersonneExterne.php terminÃ©s !!
 				<br/>
-				- Dans les formulaires, il y a trop d'espaces entres les labels et les inputs. À corriger dans le bootstrap.css ou à imposer le graphisme dans le formulaire.css .
+				- Dans les formulaires, il y a trop d'espaces entres les labels et les inputs. Ã€ corriger dans le bootstrap.css ou Ã  imposer le graphisme dans le formulaire.css .
 				<br/>
 				<br/>
-				—————————————————————————————
+				________________________________________
 				<br/>
 				<br/>
 				GestionRH v0.09<br/>
 				<br/>
-				+ Mise en place de 3 includes de connexion à la BDD :<br/>
-					• connectBDD.php,<br/>
-					• connectBDD_MySQLi.php,<br/>
-					• connectBDD_define.php<br/>
-				Remarque : cela permet d'avoir plusieurs méthodes de connexion à la base de données, et donc 3 façons de coder différemment. Donc, cela donne une meilleure flexibilité dans le code quand il y a des erreurs dans l'une ou l'autre include.
+				+ Mise en place de 3 includes de connexion Ã  la BDD :<br/>
+					â€¢ connectBDD.php,<br/>
+					â€¢ connectBDD_MySQLi.php,<br/>
+					â€¢ connectBDD_define.php<br/>
+				Remarque : cela permet d'avoir plusieurs mÃ©thodes de connexion Ã  la base de donnÃ©es, et donc 3 faÃ§ons de coder diffÃ©remment. Donc, cela donne une meilleure flexibilitÃ© dans le code quand il y a des erreurs dans l'une ou l'autre include.
 				<br/>
-				+ supprUtilisateur.php terminé !! Nous pouvons nous inspiré de ce code pour les autres fichier suppr (supprSalarie.php, supprPersonneExterne.php)
+				+ supprUtilisateur.php terminÃ© !! Nous pouvons nous inspirÃ© de ce code pour les autres fichier suppr (supprSalarie.php, supprPersonneExterne.php)
 				<br/>
 				- La suppression d'utilisateur se fait trop immediatement. Il faudrait ajouter par exemple une alert Javascript avant de supprimer un quelconque utilisateur.
 			</p>
 		</div>
 	</div>
 </div>
-<script src="vues/js/jquery.js"></script>
+	<script src="vues/js/jquery.js"></script>
 	<script src="vues/js/bootstrap.min.js"></script>
 </body>
