@@ -1,4 +1,5 @@
 <?php 
+	require_once"CntConnection.php";
 	// You have to open the session first 
 	session_start(); 
 
