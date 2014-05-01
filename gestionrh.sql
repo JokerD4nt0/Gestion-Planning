@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 14 Avril 2014 à 17:48
+-- Généré le: Jeu 01 Mai 2014 à 15:18
 -- Version du serveur: 5.6.12-log
--- Version de PHP: 5.4.16
+-- Version de PHP: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `demande` (
   `dateDebutFormation_Conge` date DEFAULT NULL,
   `dureeFormation_Conge` varchar(25) DEFAULT NULL,
   `idSalarie` int(11) DEFAULT NULL,
-  `idSalarie_1` int(11) DEFAULT NULL,
+  `idSalarieRh` int(11) DEFAULT NULL,
   PRIMARY KEY (`idDemande`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -133,8 +133,18 @@ CREATE TABLE IF NOT EXISTS `planning` (
   `anneePlanning` varchar(25) DEFAULT NULL,
   `heurePlanning` varchar(10) DEFAULT NULL,
   `idSalarie` int(11) DEFAULT NULL,
+  `semainePlanning` int(2) DEFAULT NULL,
+  `numJourPlanning` int(2) DEFAULT NULL,
+  `statutHeure` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`idPlanning`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `planning`
+--
+
+INSERT INTO `planning` (`idPlanning`, `jourPlanning`, `moisPlanning`, `anneePlanning`, `heurePlanning`, `idSalarie`, `semainePlanning`, `numJourPlanning`) VALUES
+(1, 'lundi', 'mai', '2014', '10h30', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
