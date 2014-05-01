@@ -8,6 +8,7 @@
 
 
 	<div class="container">
+		<h1>Ajouter un Salarié</h1>
 		<form action="ajoutSalarie_POST.php" method="POST">
 			<fieldset>
 				<legend>Authentifiant</legend>

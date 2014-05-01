@@ -13,11 +13,11 @@
 			<link rel="shortcut icon" href="favicon.png">
 			
 			<!-- Bootstrap core CSS -->
-			<link href="../css/bootstrap.css" rel="stylesheet">
+			<link href="../vues/css/bootstrap.css" rel="stylesheet">
 			
 			<!-- Custom styles for this template -->
-			<link href="../css/navbar-fixed-top.css" rel="stylesheet">
-			<link href="../css/form.css" rel="stylesheet">
+			<link href="../vues/css/navbar-fixed-top.css" rel="stylesheet">
+			<link href="../vues/css/form.css" rel="stylesheet">
 
 			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 			<!--[if lt IE 9]>

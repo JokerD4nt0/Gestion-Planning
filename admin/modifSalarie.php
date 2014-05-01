@@ -8,8 +8,8 @@
 
 
 	<div class="container">
-		<legend>Modifier la fiche d'un salarié</legend>
-		<h1>Liste des salariés :</h1>
+		<h1>Modifier la fiche d'un Salarié</h1>
+		<legend>Liste des salariés :</legend>
 		<?php
 			
 			

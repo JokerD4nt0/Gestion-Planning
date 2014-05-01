@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="row">
 		<div class="span2">
-		<legend>Menu</legend>
+		<h1>Menu</h1>
 		<ul class="nav nav-pills nav-stacked">
 				<li><a href="accueil.php">Mises à jour Gestion RH</a></li>
 				<li><a href="listSalarie.php">Liste des salariés</a></li>

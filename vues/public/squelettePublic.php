@@ -27,15 +27,15 @@
 	</head>
 	<body>
 	<!-- Fixed navbar -->
-<?php
-	function echoActiveClassIfRequestMatches($requestUri)
-	{
-		$current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
+		<?php
+			function echoActiveClassIfRequestMatches($requestUri)
+			{
+				$current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
 
-		if ($current_file_name == $requestUri)
-			echo 'class="active"';
-	}
-?>
+				if ($current_file_name == $requestUri)
+					echo 'class="active"';
+			}
+		?>
 		<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -53,17 +53,17 @@
 				<li <?php echoActiveClassIfRequestMatches("index.php?page=Administration");?>><a href="index.php?page=Administration">Administration</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
-	</div>
-	</div>
-    <div class="container">
-		<h1><?php echo $titre; ?></h1>
-		<p><?php echo $contenu; ?></p>
-    </div>
-	<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-	<script src="vues/js/jquery.js"></script>
-	<script src="vues/js/bootstrap.min.js"></script>
+		</div>
+		</div>
+		<div class="container">
+			<h1><?php echo $titre; ?></h1>
+			<p><?php echo $contenu; ?></p>
+		</div>
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="vues/js/jquery.js"></script>
+		<script src="vues/js/bootstrap.min.js"></script>
 	</body>
 	<footer>
 		<hr/>

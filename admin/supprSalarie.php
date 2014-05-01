@@ -8,8 +8,8 @@
 
 
 	<div class="container">
-		<legend>Supprimer un Salarié</legend>
-		<h1>Liste des salariés : </h1>
+		<h1>Supprimer un Salarié</h1>
+		<legend>Liste des salariés : </legend>
 			<?php
 				require_once "../include/connectBDD_define.php";
 				mysql_connect(DB_HOST,DB_LOGIN,DB_PASS);

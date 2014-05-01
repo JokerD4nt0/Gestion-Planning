@@ -1,5 +1,4 @@
 <?php
-	require_once"/../../include/connectBDD_MySQLi.php";
 	$titre="Administration";
 	$contenu=
 	'
@@ -14,6 +13,7 @@
 				</form>
 				<a href="index.php" class="btn btn-info">Retour à l\'accueil</a>
 	';
+	require_once"/../../include/connectBDD_MySQLi.php";
 	If(!empty($_POST))
 		{
 			$emailSalarie = $_POST["emailSalarie"];
