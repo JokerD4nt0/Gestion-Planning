@@ -27,6 +27,15 @@
 	</head>
 	<body>
 	<!-- Fixed navbar -->
+<?php
+	function echoActiveClassIfRequestMatches($requestUri)
+	{
+		$current_file_name = basename($_SERVER['REQUEST_URI'], ".php");
+
+		if ($current_file_name == $requestUri)
+			echo 'class="active"';
+	}
+?>
 		<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -39,9 +48,9 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.php">Accueil</a></li>
-				<li><a href="index.php?page=Recrutement">Recrutement</a></li>
-				<li><a href="index.php?page=Administration">Administration</a></li>
+				<li <?php echoActiveClassIfRequestMatches("index");?>><a href="index.php">Accueil</a></li>
+				<li <?php echoActiveClassIfRequestMatches("index.php?page=Recrutement");?>><a href="index.php?page=Recrutement">Recrutement</a></li>
+				<li <?php echoActiveClassIfRequestMatches("index.php?page=Administration");?>><a href="index.php?page=Administration">Administration</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>

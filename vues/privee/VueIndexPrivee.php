@@ -1,9 +1,8 @@
 <?php
-	$tritre="Gestion RH";
+	$titre="Gestion RH";
 	$contenu=
 	"
 		Bienvenue sur le site de recrutement !
 	";
-	require_once("squelettePublic.php");
+	require_once("squelettePrivee.php");
 ?>
-	

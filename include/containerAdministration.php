@@ -34,9 +34,7 @@
 				header("Location:../admin/accueil.php");
 			}
 		}
-		
-		
-		
+
 		if (isset($erreur))
 		{
 			echo("<span id=\"erreur\">".$erreur."</span><br />");
