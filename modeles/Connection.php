@@ -1,4 +1,6 @@
 <?php
+require_once"../controleurs/CntConnection.php";
+
 abstract class Connection{
 	public function connectBDD(){
 		try{

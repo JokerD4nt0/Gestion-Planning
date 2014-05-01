@@ -45,7 +45,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="accueil.php">Humanity Sport</a>
+			<a class="navbar-brand" href="indexPrivee.php">Humanity Sport</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
@@ -117,6 +117,7 @@
 				<br/>
 				<br/>
 				________________________________________
+				
 				<br/>
 				Humanity Sport v0.14le<br/>
 				<br/>
@@ -180,3 +181,6 @@
 	<script src="vues/js/jquery.js"></script>
 	<script src="vues/js/bootstrap.min.js"></script>
 </body>
+<?php
+	require_once"";
+?>

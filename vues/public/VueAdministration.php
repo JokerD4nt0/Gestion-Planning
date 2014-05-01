@@ -29,7 +29,7 @@
 			{
 				Session_start();
 				$_SESSION["emailSalarie"] = $emailSalarie;
-				header("Location:admin/accueil.php");
+				header("Location:vues/privee/squelettePrivee.php");
 			}
 		}
 
