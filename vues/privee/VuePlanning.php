@@ -1,4 +1,6 @@
 <?php
+	require_once'../controleurs/CntPlannings.php';
+
 	$titre="Plannings";
 	$contenu='
 		<legend>Affichage du planning mensuel : </legend>
@@ -11,5 +13,5 @@
 				</tr>
 			</table>
 	';
-	// require_once'squelettePrivee.php';
+	require_once'squelettePrivee.php';
 ?>
