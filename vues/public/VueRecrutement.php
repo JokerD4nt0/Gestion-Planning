@@ -1,7 +1,6 @@
 <?php
 	$titre="Recrutement";
-	$contenu=
-	'
+	$contenu='
 		<form action="envoiMail.php" method="POST">
 			<legend>Candidature</legend>
 				<fieldset>

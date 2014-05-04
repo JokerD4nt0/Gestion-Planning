@@ -46,8 +46,8 @@
 					</ul>
 					
 				</li>
-				<li <?php echoActiveClassIfRequestMatches("planning");?>>
-					<a href="planning.php">Planning</a>
+				<li <?php echoActiveClassIfRequestMatches("Plannings");?>>
+					<a href="../Vues/Privee/VuePlanning.php">Plannings</a>
 				</li>
 			</ul>
 			<ul class ="nav navbar-nav navbar-right">
