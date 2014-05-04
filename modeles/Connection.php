@@ -1,8 +1,10 @@
 <?php
 	abstract class Connection
 	{
-		public function connectBDD(){
-			try{
+		public function connectBDD()
+		{
+			try
+			{
 				$bdd = new PDO('mysql:host=localhost;dbname=gestionrh', 'root', '');
 				$bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			}
@@ -11,7 +13,8 @@
 			}
 		}
 		
-		public function connexion(){
+		public function connexion()
+		{
 			$serveur = "localhost";
 			$log_connect = "root";
 			$pass_connect = "";
@@ -23,7 +26,8 @@
 		}
 		$connexion = connexion();
 		
-		public function authentification($emailSalarie,$mdpSalarie){
+		public function authentification($emailSalarie,$mdpSalarie)
+		{
 			if(!empty($_POST)){
 				$emailSalarie = $_POST["emailSalarie"];
 				$mdpSalarie = sha1($_POST["mdpSalarie"]."c3R".TRUE);
@@ -49,7 +53,8 @@
 			}
 		}
 		
-		public function connectBDD_define(){
+		public function connectBDD_define()
+		{
 			define("DB_HOST","localhost");
 			define("DB_LOGIN","root");
 			define("DB_PASS","");

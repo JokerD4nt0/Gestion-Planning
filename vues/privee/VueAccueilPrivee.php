@@ -1,11 +1,7 @@
 <?php
-	require_once"../controleurs/controleurSession.php";
-	require_once"../controleurs/controleurConnectBDD.php";
-	require_once"../vues/vueHeader.php";
-	require_once"../vues/vueNavbar.php";
-?>
-<!-- Menu -->
-<div class="container">
+	$titre="Accueil Partie Privée";
+	$contenu=
+	'
 	<div class="row">
 		<div class="span2">
 		<legend>Menu</legend>
@@ -82,7 +78,7 @@
 				<br/>
 				+ supprSalarie.php et supprPersonneExterne.php terminés !!
 				<br/>
-				- Dans les formulaires, il y a trop d'espaces entres les labels et les inputs. À corriger dans le bootstrap.css ou à imposer le graphisme dans le formulaire.css .
+				- Dans les formulaires, il y a trop d\'espaces entres les labels et les inputs. À corriger dans le bootstrap.css ou à imposer le graphisme dans le formulaire.css .
 				<br/>
 				<br/>
 				—————————————————————————————
@@ -94,17 +90,14 @@
 					• connectBDD.php,<br/>
 					• connectBDD_MySQLi.php,<br/>
 					• connectBDD_define.php<br/>
-				Remarque : cela permet d'avoir plusieurs méthodes de connexion à la base de données, et donc 3 façons de coder différemment. Donc, cela donne une meilleure flexibilité dans le code quand il y a des erreurs dans l'une ou l'autre include.
+				Remarque : cela permet d\'avoir plusieurs méthodes de connexion à la base de données, et donc 3 façons de coder différemment. Donc, cela donne une meilleure flexibilité dans le code quand il y a des erreurs dans l\'une ou l\'autre include.
 				<br/>
 				+ supprUtilisateur.php terminé !! Nous pouvons nous inspiré de ce code pour les autres fichier suppr (supprSalarie.php, supprPersonneExterne.php)
 				<br/>
-				- La suppression d'utilisateur se fait trop immediatement. Il faudrait ajouter par exemple une alert Javascript avant de supprimer un quelconque utilisateur.
+				- La suppression d\'utilisateur se fait trop immediatement. Il faudrait ajouter par exemple une alert Javascript avant de supprimer un quelconque utilisateur.
 			</p>
 		</div>
 	</div>
-</div>
-		
-<?php 
-	require_once"../vues/vueJavascript.php";
-	require_once"../vues/vueFooter.php"; 
+	';
+	require_once("squelettePrivee.php");
 ?>

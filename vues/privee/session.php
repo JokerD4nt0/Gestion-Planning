@@ -5,5 +5,4 @@
 	{
 		header("Location:../index.php?erreur=ok");
 	}
-	require_once '/../vues/privee/VueIndexPrivee.php';
 ?>
