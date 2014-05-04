@@ -64,20 +64,14 @@
 							<li <?php echoActiveClassIfRequestMatches("ajoutSalarie");?>><a href="ajoutSalarie.php">Ajouter un salarié</a></li>
 						
 						<li class="divider"></li>
-						
 						<li class="dropdown-header">Modification</li>
 							<li <?php echoActiveClassIfRequestMatches("modifSalarie");?>><a href="modifSalarie.php">Modification d'un salarié</a></li>
-						
 						<li class="divider"></li>
-						
 						<li class="dropdown-header">Suppression</li>
 							<li <?php echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
 					</ul>
-					
 				</li>
-				<li <?php echoActiveClassIfRequestMatches("planning");?>>
-					<a href="planning.php">Planning</a>
-				</li>
+				<li <?php echoActiveClassIfRequestMatches("indexPrivee.php?page=Planning");?>><a href="indexPrivee.php?page=Planning">Planning</a></li>
 			</ul>
 			<ul class ="nav navbar-nav navbar-right">
 				<li>Bienvenue <?php echo $_SESSION['emailSalarie']?> !</li>
@@ -87,6 +81,10 @@
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>
+</div>
+<div class="container">
+	<h1><?php echo $titre; ?></h1>
+	<p><?php echo $contenu; ?></p>
 </div>
 	<!-- Bootstrap core JavaScript
 ================================================== -->
