@@ -13,7 +13,7 @@
 		$requete="
 			SELECT jourPlanning,moisPlanning,numJourPlanning,
 			FROM planning
-			WHERE=".$idPlanning."
+			WHERE idPlanning=".$idPlanning."
 			AND jourPlanning=".$jourPlanning."
 			AND moisPlanning=".$moisPlanning."
 			AND numJourPlanning=".$numJourPlanning."

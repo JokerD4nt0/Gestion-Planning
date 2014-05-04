@@ -4,10 +4,10 @@
 		<legend>Affichage du planning mensuel : </legend>
 			<table>
 				<tr>
-					<td>'.$idPlanning['idPlanning'].'</td>
-					<td>'.$jourPlanning['joursPlanning'].'</td>
-					<td>'.$moisPlanning['moisPlanning'].'</td>
-					<td>'.$numJourPlanning['numJourPlanning'].'</td>
+					<td>'.$donnees['idPlanning'].'</td>
+					<td>'.$donnees['joursPlanning'].'</td>
+					<td>'.$donnees['moisPlanning'].'</td>
+					<td>'.$donnees['numJourPlanning'].'</td>
 				</tr>
 			</table>
 	';
