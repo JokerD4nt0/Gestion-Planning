@@ -1,5 +1,5 @@
 <?php
-	require_once'/../modeles/Modele.php';
+	// require_once'/../modeles/Modele.php';
 	
 	class Recrutement
 	{
@@ -34,14 +34,14 @@
 			while($donnees=$reponse->fetch())
 			{
 				$posteSouhaiter[]=array(
-					$donnees['idPoste'];
-					$donnees['libellePoste'];
-					$donnees['lieuPoste'];
-					$donnees['typePoste'];
-					$donnees['descriptifPoste'];
+					$donnees['idPoste'],
+					$donnees['libellePoste'],
+					$donnees['lieuPoste'],
+					$donnees['typePoste'],
+					$donnees['descriptifPoste']
 				);
 			}
-			return $posteSouhaiter
+			return $posteSouhaiter;
 		}
 	}
 ?>

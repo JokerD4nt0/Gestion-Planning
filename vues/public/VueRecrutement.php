@@ -1,4 +1,4 @@
-<?php
+<
 	$titre="Recrutement";
 	$contenu='
 		<form action="envoiMail.php" method="POST">
@@ -12,9 +12,7 @@
 					<input type=text name="emailCandidat" placeholder="Email" required /><br/>
 					<label>Libellé du poste souhaité :</label>
 					<select type=text name="posteSouhaiteCandidat" >
-						<option value="Technicien">Technicien</option>
-						<option value="Physicien">Physicien</option>
-						<option value="Veilleur de nuit">Veilleur de nuit</option>
+						<option value="Technicien"><?php echo .$donnees["libellePoste"]. ?></option>
 					</select><br/>
 					<input type=submit class="btn btn-primary" value="Envoyer"/>
 				</fieldset>

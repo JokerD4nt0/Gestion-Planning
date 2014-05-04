@@ -8,9 +8,7 @@
 			/**  Exécute une requête SQL éventuellement paramétrée
 			* en parametres : $sql La requête SQL et $parametres tableau des valeurs associées à la requête
 			* retourne  un PDOStatement : le résultat renvoyé par la requête*/
-			
-			
-			
+
 			if ($parametres == null)
 			{
 				$resultat = $this->getBdd()->query($sql); // exécution directe
@@ -23,14 +21,11 @@
 			}
 				return $resultat;
 		}
-
 		
 		private function getBdd()
 		{
 			/** Renvoie un objet de connexion à la BD en initialisant la connexion au besoin
 			* retourne l'objet PDO de connexion à la BDD */
-			
-			
 			
 			if ($this->bdd == null)
 			{            // Création de la connexion
