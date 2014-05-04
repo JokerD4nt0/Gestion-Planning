@@ -25,7 +25,7 @@
 				WHERE idPlanning=".$idPlanning."
 				AND jourPlanning=".$jourPlanning."
 				AND moisPlanning=".$moisPlanning."
-				AND numJourPlanning=".$numJourPlanning."
+				AND numJourPlanning=".$numJourPlanning.";
 			";
 			$reponse=$this->executerRequete($requete);
 			$planningMensuel=array();
