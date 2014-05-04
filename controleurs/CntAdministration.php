@@ -1,4 +1,4 @@
 <?php
 	require_once"/../vues/public/VueAdministration.php";
-	// require_once"/../modeles/Connection.php";
+	require_once"/../modeles/ModAdministration.php";
 ?>
