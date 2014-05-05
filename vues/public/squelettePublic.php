@@ -50,7 +50,7 @@
 			<ul class="nav navbar-nav">
 				<li <?php echoActiveClassIfRequestMatches("index");?>><a href="index.php">Accueil</a></li>
 				<li <?php echoActiveClassIfRequestMatches("index.php?page=Recrutement");?>><a href="index.php?page=Recrutement">Recrutement</a></li>
-				<li <?php echoActiveClassIfRequestMatches("index.php?page=Administration");?>><a href="index.php?page=Administration">Administration</a></li>
+				<li <?php echoActiveClassIfRequestMatches("index.php?page=EspaceSalaries");?>><a href="index.php?page=EspaceSalaries">Espace Salariés</a></li>
 			</ul>
 		</div><!--/.nav-collapse -->
 		</div>

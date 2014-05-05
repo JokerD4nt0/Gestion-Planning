@@ -1,8 +1,8 @@
 <?php
-	$titre="Administration";
+	$titre="Espace Salariés";
 	$contenu=
 	'
-		<form class="form-signin" method="POST" action="index.php?page=Administration">
+		<form class="form-signin" method="POST" action="index.php?page=EspaceSalaries">
 			<h2 class="form-signin-heading">Veuillez vous authentifier</h2>
 				<input name="emailSalarie" type="text" class="form-control" placeholder="Authentifiant" autofocus>
 				<input name="mdpSalarie" type="password" class="form-control" placeholder="Mot de passe">
