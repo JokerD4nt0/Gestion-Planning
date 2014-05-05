@@ -1,215 +1,153 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4
--- http://www.phpmyadmin.net
---
--- Client: localhost
--- Généré le: Jeu 01 Mai 2014 à 15:18
--- Version du serveur: 5.6.12-log
--- Version de PHP: 5.4.12
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Base de données: `gestionrh`
---
-CREATE DATABASE IF NOT EXISTS `gestionrh` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `gestionrh` DEFAULT
+CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `gestionrh`;
 
--- --------------------------------------------------------
+CREATE TABLE Salarie(
+        idSalarie              int (11) Auto_increment  NOT NULL ,
+        emailSalarie           Varchar (30) ,
+        mdpSalarie             Varchar (40) ,
+        nomSalarie             Varchar (20) ,
+        prenomSalarie          Varchar (20) ,
+        dateNaissanceSalarie   Date ,
+        sexeSalarie            Char (1) ,
+        adresseSalarie         Varchar (20) ,
+        telSalarie             Int ,
+        diplomesSalarie        Varchar (30) ,
+        salaireSalarie         Float ,
+        dateRecrutementSalarie Date ,
+        idPlanning             Int ,
+        idPoste                Int ,
+        PRIMARY KEY (idSalarie )
+)ENGINE=InnoDB;
 
---
--- Structure de la table `candidat`
---
 
-CREATE TABLE IF NOT EXISTS `candidat` (
-  `idCandidat` int(11) NOT NULL AUTO_INCREMENT,
-  `posteSouhaite` varchar(25) DEFAULT NULL,
-  `nomCandidat` varchar(25) DEFAULT NULL,
-  `prenomCandidat` varchar(30) DEFAULT NULL,
-  `emailCandidat` varchar(30) DEFAULT NULL,
-  `diplomesCandidat` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`idCandidat`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+CREATE TABLE Employe(
+        idSalarie Int NOT NULL ,
+        PRIMARY KEY (idSalarie )
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `candidature`
---
+CREATE TABLE Interimaire(
+        dateFinContrat Date ,
+        idSalarie      Int NOT NULL ,
+        PRIMARY KEY (idSalarie )
+)ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS `candidature` (
-  `idCandidature` int(11) NOT NULL AUTO_INCREMENT,
-  `dateCandidature` date DEFAULT NULL,
-  `etatCandidature` varchar(25) DEFAULT NULL,
-  `idPoste` int(11) DEFAULT NULL,
-  `idCandidat` int(11) DEFAULT NULL,
-  `idSalarie` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idCandidature`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
+CREATE TABLE Planning(
+        idPlanning    int (11) Auto_increment  NOT NULL ,
+        moisPlanning  Varchar (25) ,
+        anneePlanning Varchar (25) ,
+        idSalarie     Int ,
+        PRIMARY KEY (idPlanning )
+)ENGINE=InnoDB;
 
---
--- Structure de la table `conge`
---
 
-CREATE TABLE IF NOT EXISTS `conge` (
-  `motifConge` varchar(25) DEFAULT NULL,
-  `commentaireConge` varchar(25) DEFAULT NULL,
-  `idDemande` int(11) NOT NULL,
-  PRIMARY KEY (`idDemande`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE Rh(
+        datePriseFonctionRh Date ,
+        mdpRh               Varchar (40) ,
+        idSalarie           Int NOT NULL ,
+        PRIMARY KEY (idSalarie )
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `demande`
---
+CREATE TABLE Demande(
+        idDemande                int (11) Auto_increment  NOT NULL ,
+        dateDemande              Date ,
+        dateValidationDemande    Date ,
+        dateDebutFormation_Conge Date ,
+        dureeFormation_Conge     Varchar (25) ,
+        idSalarie                Int ,
+        idSalarie_1              Int ,
+        PRIMARY KEY (idDemande )
+)ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS `demande` (
-  `idDemande` int(11) NOT NULL AUTO_INCREMENT,
-  `dateDemande` date DEFAULT NULL,
-  `dateValidationDemande` date DEFAULT NULL,
-  `dateDebutFormation_Conge` date DEFAULT NULL,
-  `dureeFormation_Conge` varchar(25) DEFAULT NULL,
-  `idSalarie` int(11) DEFAULT NULL,
-  `idSalarieRh` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idDemande`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
+CREATE TABLE Conge(
+        motifConge       Varchar (25) ,
+        commentaireConge Varchar (25) ,
+        idDemande        Int NOT NULL ,
+        PRIMARY KEY (idDemande )
+)ENGINE=InnoDB;
 
---
--- Structure de la table `employe`
---
 
-CREATE TABLE IF NOT EXISTS `employe` (
-  `idSalarie` int(11) NOT NULL,
-  PRIMARY KEY (`idSalarie`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE Formation(
+        libelleFormation Varchar (25) ,
+        niveauFormation  Varchar (25) ,
+        idDemande        Int NOT NULL ,
+        PRIMARY KEY (idDemande )
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `formation`
---
+CREATE TABLE Candidat(
+        idCandidat       int (11) Auto_increment  NOT NULL ,
+        posteSouhaite    Varchar (25) ,
+        nomCandidat      Varchar (25) ,
+        prenomCandidat   Varchar (30) ,
+        emailCandidat    Varchar (30) ,
+        diplomesCandidat Varchar (25) ,
+        PRIMARY KEY (idCandidat )
+)ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS `formation` (
-  `libelleFormation` varchar(25) DEFAULT NULL,
-  `niveauFormation` varchar(25) DEFAULT NULL,
-  `idDemande` int(11) NOT NULL,
-  PRIMARY KEY (`idDemande`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+CREATE TABLE Poste(
+        idPoste         int (11) Auto_increment  NOT NULL ,
+        libellePoste    Varchar (25) ,
+        lieuPoste       Varchar (25) ,
+        typePoste       Varchar (25) ,
+        descriptifPoste Text ,
+        PRIMARY KEY (idPoste )
+)ENGINE=InnoDB;
 
---
--- Structure de la table `interimaire`
---
 
-CREATE TABLE IF NOT EXISTS `interimaire` (
-  `dateFinContrat` date DEFAULT NULL,
-  `idSalarie` int(11) NOT NULL,
-  PRIMARY KEY (`idSalarie`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE Candidature(
+        idCandidature   int (11) Auto_increment  NOT NULL ,
+        dateCandidature Date ,
+        etatCandidature Varchar (25) ,
+        idPoste         Int ,
+        idCandidat      Int ,
+        idSalarie       Int ,
+        PRIMARY KEY (idCandidature )
+)ENGINE=InnoDB;
 
--- --------------------------------------------------------
 
---
--- Structure de la table `planning`
---
+CREATE TABLE Horaire(
+        idHoraire     int (11) Auto_increment  NOT NULL ,
+        jourHoraire   Varchar (25) ,
+        heurDebut     Varchar (25) ,
+        heureFin      Varchar (25) ,
+        statutHoraire Varchar (25) ,
+        idPlanning    Int ,
+        PRIMARY KEY (idHoraire )
+)ENGINE=InnoDB;
 
-CREATE TABLE IF NOT EXISTS `planning` (
-  `idPlanning` int(11) NOT NULL AUTO_INCREMENT,
-  `moisPlanning` varchar(25) DEFAULT NULL,
-  `anneePlanning` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`idPlanning`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
+ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
+ALTER TABLE Employe ADD CONSTRAINT FK_Employe_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Interimaire ADD CONSTRAINT FK_Interimaire_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Rh ADD CONSTRAINT FK_Rh_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie_1 FOREIGN KEY (idSalarie_1) REFERENCES Salarie(idSalarie);
+ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
+ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
+ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
+ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idCandidat FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat);
+ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Horaire ADD CONSTRAINT FK_Horaire_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
 
--- --------------------------------------------------------
 
---
--- Structure de la table `horaire`
---
-
-CREATE TABLE IF NOT EXISTS `horaire` (
-  `idHoraire` int(11) NOT NULL AUTO_INCREMENT,
-  `jourHoraire` varchar(25) DEFAULT NULL,
-  `heureDebut` varchar(25) DEFAULT NULL,
-  `heureFin` varchar(25) DEFAULT NULL,
-  `statutHoraire` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`idHoraire`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `poste`
---
-
-CREATE TABLE IF NOT EXISTS `poste` (
-  `idPoste` int(11) NOT NULL AUTO_INCREMENT,
-  `libellePoste` varchar(25) DEFAULT NULL,
-  `lieuPoste` varchar(25) DEFAULT NULL,
-  `typePoste` varchar(25) DEFAULT NULL,
-  `descriptifPoste` text,
-  PRIMARY KEY (`idPoste`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `rh`
---
-
-CREATE TABLE IF NOT EXISTS `rh` (
-  `datePriseFonctionRh` date DEFAULT NULL,
-  `mdpRh` varchar(40) DEFAULT NULL,
-  `idSalarie` int(11) NOT NULL,
-  PRIMARY KEY (`idSalarie`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `salarie`
---
-
-CREATE TABLE IF NOT EXISTS `salarie` (
-  `idSalarie` int(11) NOT NULL AUTO_INCREMENT,
-  `emailSalarie` varchar(30) DEFAULT NULL,
-  `mdpSalarie` varchar(40) DEFAULT NULL,
-  `nomSalarie` varchar(20) DEFAULT NULL,
-  `prenomSalarie` varchar(20) DEFAULT NULL,
-  `dateNaissanceSalarie` date DEFAULT NULL,
-  `sexeSalarie` char(1) DEFAULT NULL,
-  `adresseSalarie` varchar(20) DEFAULT NULL,
-  `telSalarie` int(11) DEFAULT NULL,
-  `diplomesSalarie` varchar(30) DEFAULT NULL,
-  `salaireSalarie` float DEFAULT NULL,
-  `dateRecrutementSalarie` date DEFAULT NULL,
-  `idPlanning` int(11) NOT NULL,
-  `idPoste` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idSalarie`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `salarie`
 --
 
 INSERT INTO `salarie` (`idSalarie`, `emailSalarie`, `mdpSalarie`, `nomSalarie`, `prenomSalarie`, `dateNaissanceSalarie`, `sexeSalarie`, `adresseSalarie`, `telSalarie`, `diplomesSalarie`, `salaireSalarie`, `dateRecrutementSalarie`, `idPlanning`, `idPoste`) VALUES
-(1, 'longhoang@hotmail.fr', '8e9e073e70db91b9353a7b2919f86642e743d9f5', 'HOANG', 'Long', '1988-06-23', 'H', '', 0, '', 0, '2014-04-02', 0, NULL),
-(2, 'adrien.morla66@gmail.com', '17d9cbc5f47611875ad06482b0b570d84b24278a', 'MORLA', 'Adrien', '0000-00-00', 'H', '', 0, '', 0, '2014-04-02', 0, NULL),
-(3, 'sigerpreston@hotmail.com', '29c451be644da75cfd0a906bb8644f4bd8f3ef49', 'SIGER', 'Preston', '0000-00-00', 'H', '', 0, '', 0, '0000-00-00', 0, NULL),
-(4, '', '', 'NGUYEN', 'Sophie', '0000-00-00', 'F', '', 0, '', 0, '0000-00-00', 0, NULL);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(1, 'longhoang@hotmail.fr', '8e9e073e70db91b9353a7b2919f86642e743d9f5', 'HOANG', 'Long', '1988-06-23', 'H', '', 0, '', 0, '2014-04-02', NULL, NULL),
+(2, 'adrien.morla66@gmail.com', '17d9cbc5f47611875ad06482b0b570d84b24278a', 'MORLA', 'Adrien', '0000-00-00', 'H', '', 0, '', 0, '2014-04-02', NULL, NULL),
+(3, 'sigerpreston@hotmail.com', '29c451be644da75cfd0a906bb8644f4bd8f3ef49', 'SIGER', 'Preston', '0000-00-00', 'H', '', 0, '', 0, '0000-00-00', NULL, NULL),
+(4, '', '', 'NGUYEN', 'Sophie', '0000-00-00', 'F', '', 0, '', 0, '0000-00-00', NULL, NULL);
