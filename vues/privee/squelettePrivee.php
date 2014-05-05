@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Humanity Sport</title>
+		<title>Development Company</title>
 		
 		<!-- Links -->
 			<!-- Favicon -->
@@ -48,7 +48,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.php?page=AccueilPrivee">Humanity Sport</a>
+					<a class="navbar-brand" href="index.php?page=AccueilPrivee">Development Company</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
