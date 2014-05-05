@@ -1,16 +1,17 @@
 <?php
-	$titre="Plannings";
+	$titre="Horaire";
 	$contenu='
 	<table border=1>
 		<tr>
-			<td>ID Planning</td>
-			<td>Mois</td>
-			<td>Année</td>
-			<td>ID Salarié</td>
+			<td>ID Horaire</td>
+			<td>Jour</td>
+			<td>Heure Début</td>
+			<td>Heure Fin</td>
+			<td>Statut Horaire</td>
 		</tr>
 	';
 	
-	foreach ($plannings as $tab)
+	foreach ($horaires as $tab)
 	{
 		$contenu.=
 		"
@@ -20,6 +21,7 @@
 					<td>".$tab[1]."</td>
 					<td>".$tab[2]."</td>
 					<td>".$tab[3]."</td>
+					<td>".$tab[4]."</td>
 				</tr>
 		";
 	}
