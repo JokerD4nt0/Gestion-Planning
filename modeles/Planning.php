@@ -18,9 +18,9 @@
 				$planning[]=array
 				(
 					$donnees['idPlanning'],
-					$donnees['jourPlanning'],
-					$donnees['numJourPlanning'],
-					$donnees['moisPlanning']
+					$donnees['moisPlanning'],
+					$donnees['anneePlanning'],
+					$donnees['idSalarie']
 				);
 			}
 			return $planning;
