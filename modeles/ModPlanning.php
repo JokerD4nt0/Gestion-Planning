@@ -6,7 +6,6 @@
 		$bdd = new Planning;
 		$plannings = array();
 		$plannings = $bdd->recupererPlanning();
-
 	}
 	catch(Exception $e)
 	{

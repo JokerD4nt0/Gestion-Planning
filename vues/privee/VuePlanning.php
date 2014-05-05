@@ -12,10 +12,7 @@
 			</tr>
 			<tr>
 				<td>8h00</td>
-				<td><select type=text name="statutHeure" >
-						<option value="Travail">Travail</option>
-						<option value="Pause">Pause</option>
-				</td>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>

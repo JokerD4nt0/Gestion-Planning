@@ -149,3 +149,18 @@ INSERT INTO `salarie` (`idSalarie`, `emailSalarie`, `mdpSalarie`, `nomSalarie`, 
 (2, 'adrien.morla66@gmail.com', '17d9cbc5f47611875ad06482b0b570d84b24278a', 'MORLA', 'Adrien', '0000-00-00', 'H', '', 0, '', 0, '2014-04-02', NULL, NULL),
 (3, 'sigerpreston@hotmail.com', '29c451be644da75cfd0a906bb8644f4bd8f3ef49', 'SIGER', 'Preston', '0000-00-00', 'H', '', 0, '', 0, '0000-00-00', NULL, NULL),
 (4, '', '', 'NGUYEN', 'Sophie', '0000-00-00', 'F', '', 0, '', 0, '0000-00-00', NULL, NULL);
+
+--
+-- Contenu de la table planning
+--
+
+INSERT INTO Planning (idPlanning,moisPlanning,anneePlanning,idSalarie) VALUES
+(1,"Mai","2014",1);
+
+--
+-- Contenu de la table `horaire`
+--
+
+INSERT INTO `horaire` (idHoraire,jourHoraire,heureDebut,heureFin,StatutHoraire,idPlanning) VALUES 
+(1,"Lundi","8h00","9h00","Travail",1);
+
