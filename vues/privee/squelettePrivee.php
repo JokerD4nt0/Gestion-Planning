@@ -74,17 +74,7 @@
 									<li <?php //echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
 							</ul>
 						</li>-->
-					<li 
-					<?php echoActiveClassIfRequestMatches("index.php?page=Planning");
-						echoActiveClassIfRequestMatches("index.php?page=Horaire");
-						?> class="dropdown">
-						<a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Planning<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-							<li <?php echoActiveClassIfRequestMatches("index.php?page=Planning");?>><a href="index.php?page=Planning">Planning</a></li>
-							<li <?php echoActiveClassIfRequestMatches("index.php?page=Horaire");?>><a href="index.php?page=Horaire">Horaire</a></li>
-					</ul>
-					</li>
+						<li <?php echoActiveClassIfRequestMatches("index.php?page=Planning");?>><a href="index.php?page=Planning">Planning</a></li>
 					</ul>
 					<ul class ="nav navbar-nav navbar-right">
 						<li>Bienvenue <?php echo $_SESSION['emailSalarie']?> !</li>
