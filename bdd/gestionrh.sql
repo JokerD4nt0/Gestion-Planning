@@ -128,23 +128,25 @@ CREATE TABLE IF NOT EXISTS `interimaire` (
 
 CREATE TABLE IF NOT EXISTS `planning` (
   `idPlanning` int(11) NOT NULL AUTO_INCREMENT,
-  `jourPlanning` varchar(25) DEFAULT NULL,
   `moisPlanning` varchar(25) DEFAULT NULL,
   `anneePlanning` varchar(25) DEFAULT NULL,
-  `heurePlanning` varchar(10) DEFAULT NULL,
-  `idSalarie` int(11) DEFAULT NULL,
-  `semainePlanning` int(2) DEFAULT NULL,
-  `numJourPlanning` int(2) DEFAULT NULL,
-  `statutHeure` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`idPlanning`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Contenu de la table `planning`
+-- Structure de la table `horaire`
 --
 
-INSERT INTO `planning` (`idPlanning`, `jourPlanning`, `moisPlanning`, `anneePlanning`, `heurePlanning`, `idSalarie`, `semainePlanning`, `numJourPlanning`) VALUES
-(1, 'lundi', 'mai', '2014', '10h30', 1, NULL, NULL);
+CREATE TABLE IF NOT EXISTS `horaire` (
+  `idHoraire` int(11) NOT NULL AUTO_INCREMENT,
+  `jourHoraire` varchar(25) DEFAULT NULL,
+  `heureDebut` varchar(25) DEFAULT NULL,
+  `heureFin` varchar(25) DEFAULT NULL,
+  `statutHoraire` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`idHoraire`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
