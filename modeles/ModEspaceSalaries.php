@@ -27,7 +27,6 @@
 		{
 			Session_start();
 			$_SESSION["emailSalarie"] = $emailSalarie;
-			// header("Location:admin/accueil.php");
 			header("Location:index.php?page=AccueilPrivee");
 		}
 	}
@@ -35,10 +34,5 @@
 	if (isset($erreur))
 	{
 		echo("<span id=\"erreur\">".$erreur."</span><br />");
-	}
-	
-	elseif (isset($_GET["erreur"]))
-	{
-		echo("<span id=\"erreur\">Accès interdit</span><br />");
 	}
 ?>

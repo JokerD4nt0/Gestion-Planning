@@ -1,17 +1,121 @@
 <?php
-	require_once'../controleurs/CntPlannings.php';
-
-	$titre="Plannings";
+	$titre="Plannings Hebdomadaires";
 	$contenu='
-		<legend>Affichage du planning mensuel : </legend>
-			<table>
-				<tr>
-					<td>'.$donnees['idPlanning'].'</td>
-					<td>'.$donnees['joursPlanning'].'</td>
-					<td>'.$donnees['moisPlanning'].'</td>
-					<td>'.$donnees['numJourPlanning'].'</td>
-				</tr>
-			</table>
+		<table border=1>
+			<tr>
+				<td>Heure</td>
+				<td>Lundi</td>
+				<td>Mardi</td>
+				<td>Mercredi</td>
+				<td>Jeudi</td>
+				<td>Vendredi</td
+			</tr>
+			<tr>
+				<td>8h00</td>
+				<td><select type=text name="statutHeure" >
+						<option value="Travail">Travail</option>
+						<option value="Pause">Pause</option>
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>9h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>10h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>11h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>12h00</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+			</tr>
+			<tr>
+				<td>13h00</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+				<td>Pause</td>
+			</tr>
+			<tr>
+				<td>14h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>15h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>16h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>17h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>18h00</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
 	';
+	
+	foreach ($plannings as $tab)
+	{
+		$contenu.=
+		"
+			<p>
+				<tr>
+					<td>".$tab[0]."</td>
+					<td>".$tab[1]."</td>
+					<td>".$tab[2]."</td>
+					<td>".$tab[3]."</td>
+				</tr>
+		";
+	}
+	$contenu.= '</p></table>';
 	require_once'squelettePrivee.php';
 ?>

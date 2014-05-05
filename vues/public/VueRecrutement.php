@@ -1,7 +1,7 @@
-<
+<?php
 	$titre="Recrutement";
 	$contenu='
-		<form action="envoiMail.php" method="POST">
+		<form method="POST">
 			<legend>Candidature</legend>
 				<fieldset>
 					<label for="nomCandidat">Nom :</label>
@@ -11,12 +11,16 @@
 					<label for="emailCandidat">Email :</label>
 					<input type=text name="emailCandidat" placeholder="Email" required /><br/>
 					<label>Libellé du poste souhaité :</label>
-					<select type=text name="posteSouhaiteCandidat" >
-						<option value="Technicien"><?php echo .$donnees["libellePoste"]. ?></option>
+					<select type=text name="libellePoste" >
+						<option value=""></option>
+						<option value=""></option>
+						<option value=""></option>
 					</select><br/>
 					<input type=submit class="btn btn-primary" value="Envoyer"/>
 				</fieldset>
 		</form>
+		
+		
 	';
 	require_once'squelettePublic.php';
 ?>
