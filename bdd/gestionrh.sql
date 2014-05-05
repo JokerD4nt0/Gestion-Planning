@@ -118,7 +118,7 @@ CREATE TABLE Candidature(
 CREATE TABLE Horaire(
         idHoraire     int (11) Auto_increment  NOT NULL ,
         jourHoraire   Varchar (25) ,
-        heurDebut     Varchar (25) ,
+        heureDebut    Varchar (25) ,
         heureFin      Varchar (25) ,
         statutHoraire Varchar (25) ,
         idPlanning    Int ,
@@ -139,8 +139,6 @@ ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPos
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idCandidat FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Horaire ADD CONSTRAINT FK_Horaire_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
-
-
 
 --
 -- Contenu de la table `salarie`
