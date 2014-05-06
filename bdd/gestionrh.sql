@@ -63,7 +63,7 @@ CREATE TABLE Demande(
         dateDebutFormation_Conge Date ,
         dureeFormation_Conge     Varchar (25) ,
         idSalarie                Int ,
-        idSalarie_Rh              Int ,
+        idSalarie_1              Int ,
         PRIMARY KEY (idDemande )
 )ENGINE=InnoDB;
 
@@ -85,12 +85,13 @@ CREATE TABLE Formation(
 
 
 CREATE TABLE Candidat(
-        idCandidat       int (11) Auto_increment  NOT NULL ,
-        posteSouhaite    Varchar (25) ,
-        nomCandidat      Varchar (25) ,
-        prenomCandidat   Varchar (30) ,
-        emailCandidat    Varchar (30) ,
-        diplomesCandidat Varchar (25) ,
+        idCandidat          int (11) Auto_increment  NOT NULL ,
+        posteSouhaite       Varchar (25) ,
+        nomCandidat         Varchar (25) ,
+        prenomCandidat      Varchar (30) ,
+        emailCandidat       Varchar (30) ,
+        diplomesCandidat    Varchar (25) ,
+        commentaireCandidat Text ,
         PRIMARY KEY (idCandidat )
 )ENGINE=InnoDB;
 
@@ -133,7 +134,7 @@ ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idSalarie FOREIGN KEY (idSalarie
 ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idHoraire FOREIGN KEY (idHoraire) REFERENCES Horaire(idHoraire);
 ALTER TABLE Rh ADD CONSTRAINT FK_Rh_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
-ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie_Rh FOREIGN KEY (idSalarie_Rh) REFERENCES Salarie(idSalarie);
+ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie_1 FOREIGN KEY (idSalarie_1) REFERENCES Salarie(idSalarie);
 ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
