@@ -1,5 +1,49 @@
 -- Mettre les triggers ici
 
+-- Création d'un trigger qui crée automatiquement un planning aprés l'ajout d'un salarié (voir en dessous)
+DELIMITER //
+CREATE TRIGGER new_planning
+AFTER INSERT ON salarie
+FOR EACH ROW
+BEGIN
+	INSERT INTO planning(
+		idPlanning,
+		moisPlanning,
+		anneePlanning,
+		idSalarie)
+	VALUES(
+		NEW.idPlanning,
+		'',
+		'',
+		NEW.idSalarie
+	);
+END //
+DELIMITER ;
+-- Création d'un trigger qui crée automatiquement une horraire aprés l'ajout d'un planning 
+DELIMITER //
+CREATE TRIGGER new_horaire
+AFTER INSERT ON planning
+FOR EACH ROW
+BEGIN
+	INSERT INTO horaire(
+		idHoraire,
+		jourHoraire,
+		heureDebut,
+		heureFin,
+		StatutHoraire,
+		idPlanning)
+	VALUES(
+		NEW.idHoraire,
+		'',
+		'',
+		'',
+		'',
+		NEW.idPlanning
+	);
+END //
+DELIMITER ;
+-- MODIFICATION DU MCD REQUIS ENTRE HORAIRE ET PLANNING !!!!!!!!!!!!!!!!!!!!!!
+-- Début triggers Histo
 CREATE TABLE candidat_histo (
   `idCandidat` int(11) NOT NULL AUTO_INCREMENT,  -- Colonnes Historisées
   `nomCandidat` varchar(25) DEFAULT NULL,
@@ -35,6 +79,7 @@ BEGIN
         CURRENT_USER(),
         'UPDATE');
 END //
+
 
 CREATE TRIGGER after_delete_candidat 
 AFTER DELETE ON candidat 

@@ -43,6 +43,7 @@ CREATE TABLE Planning(
         moisPlanning  Varchar (25) ,
         anneePlanning Varchar (25) ,
         idSalarie     Int ,
+        idHoraire     Int ,
         PRIMARY KEY (idPlanning )
 )ENGINE=InnoDB;
 
@@ -62,7 +63,7 @@ CREATE TABLE Demande(
         dateDebutFormation_Conge Date ,
         dureeFormation_Conge     Varchar (25) ,
         idSalarie                Int ,
-        idSalarie_1              Int ,
+        idSalarie_Rh              Int ,
         PRIMARY KEY (idDemande )
 )ENGINE=InnoDB;
 
@@ -121,7 +122,6 @@ CREATE TABLE Horaire(
         heureDebut    Varchar (25) ,
         heureFin      Varchar (25) ,
         statutHoraire Varchar (25) ,
-        idPlanning    Int ,
         PRIMARY KEY (idHoraire )
 )ENGINE=InnoDB;
 
@@ -130,15 +130,15 @@ ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPoste FOREIGN KEY (idPoste) REFE
 ALTER TABLE Employe ADD CONSTRAINT FK_Employe_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Interimaire ADD CONSTRAINT FK_Interimaire_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idHoraire FOREIGN KEY (idHoraire) REFERENCES Horaire(idHoraire);
 ALTER TABLE Rh ADD CONSTRAINT FK_Rh_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
-ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie_1 FOREIGN KEY (idSalarie_1) REFERENCES Salarie(idSalarie);
+ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie_Rh FOREIGN KEY (idSalarie_Rh) REFERENCES Salarie(idSalarie);
 ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idCandidat FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
-ALTER TABLE Horaire ADD CONSTRAINT FK_Horaire_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
 
 --
 -- Contenu de la table `salarie`
@@ -151,16 +151,14 @@ INSERT INTO `salarie` (`idSalarie`, `emailSalarie`, `mdpSalarie`, `nomSalarie`, 
 (4, '', '', 'NGUYEN', 'Sophie', '0000-00-00', 'F', '', 0, '', 0, '0000-00-00', NULL, NULL);
 
 --
--- Contenu de la table planning
---
-
-INSERT INTO Planning (idPlanning,moisPlanning,anneePlanning,idSalarie) VALUES
-(1,"Mai","2014",1);
-
---
 -- Contenu de la table `horaire`
 --
 
-INSERT INTO `horaire` (idHoraire,jourHoraire,heureDebut,heureFin,StatutHoraire,idPlanning) VALUES 
-(1,"Lundi","8h00","9h00","Travail",1);
+INSERT INTO `horaire` (idHoraire,jourHoraire,heureDebut,heureFin,StatutHoraire) VALUES 
+(1,"Lundi","8h00","9h00","Travail");
+--
+-- Contenu de la table planning
+--
 
+INSERT INTO `planning` (idPlanning,moisPlanning,anneePlanning,idSalarie,idHoraire) VALUES
+(1,"Mai","2014",1,1);
