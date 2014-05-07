@@ -3,6 +3,6 @@
 	
 	if(!isset($_SESSION["emailSalarie"]))
 	{
-		header("Location:../index.php?erreur=ok");
+		header("Location:index.php?erreur=ok");
 	}
 ?>

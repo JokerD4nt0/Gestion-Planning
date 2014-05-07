@@ -40,12 +40,12 @@
 		 // on fait un while pour afficher la liste des fonctions trouvées, ainsi que l'id qui permettra de faire le lien vers la page de la fonction
 			while($donnees = mysql_fetch_array($query)){
 		?>
-		<a href="planning.php?id=<?php echo $donnees['idSalarie']; ?>"><?php echo $donnees['nomSalarie']." ".$donnees['prenomSalarie']; ?></a><br/>
+		<a href="recherchePlanning.php?id=<?php echo $donnees['idSalarie']; ?>"><?php echo $donnees['nomSalarie']." ".$donnees['prenomSalarie']; ?></a><br/>
 		<?php
 		// fin de la boucle
 			} 
 		?><br/><br/>
-		<a href="planning.php">Faire une nouvelle recherche</a></p>
+		<a href="recherchePlanning.php">Faire une nouvelle recherche</a></p>
 		<?php
 		// Fini d'afficher les résultats ! Maintenant, nous allons afficher l'éventuelle erreur en cas d'échec de recherche et le formulaire.
 		} 
@@ -64,7 +64,7 @@
 		else{ 
 		?>
 			<p>Vous allez faire une recherche dans notre base de données concernant les Salariés. Tapez une requête pour réaliser une recherche.</p>
-			<form action="planning.php" method="Post">
+			<form action="recherchePlanning.php" method="Post">
 				<input type="text" name="requete" size="10"/><br/><br/>
 				<input type="submit" class="btn btn-primary" value="Ok"/>
 			</form>

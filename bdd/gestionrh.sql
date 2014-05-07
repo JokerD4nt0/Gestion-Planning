@@ -86,11 +86,11 @@ CREATE TABLE Formation(
 
 CREATE TABLE Candidat(
         idCandidat          int (11) Auto_increment  NOT NULL ,
-        posteSouhaite       Varchar (25) ,
         nomCandidat         Varchar (25) ,
         prenomCandidat      Varchar (30) ,
         emailCandidat       Varchar (30) ,
         diplomesCandidat    Varchar (25) ,
+		posteSouhaiteCandidat Varchar(25) ,
         commentaireCandidat Text ,
         PRIMARY KEY (idCandidat )
 )ENGINE=InnoDB;
@@ -99,7 +99,7 @@ CREATE TABLE Candidat(
 CREATE TABLE Poste(
         idPoste         int (11) Auto_increment  NOT NULL ,
         libellePoste    Varchar (25) ,
-        lieuPoste       Varchar (25) ,
+        lieuPoste       Varchar (40) ,
         typePoste       Varchar (25) ,
         descriptifPoste Text ,
         PRIMARY KEY (idPoste )
@@ -155,11 +155,21 @@ INSERT INTO `salarie` (`idSalarie`, `emailSalarie`, `mdpSalarie`, `nomSalarie`, 
 -- Contenu de la table `horaire`
 --
 
-INSERT INTO `horaire` (idHoraire,jourHoraire,heureDebut,heureFin,StatutHoraire) VALUES 
-(1,"Lundi","8h00","9h00","Travail");
+INSERT INTO `horaire` (idHoraire, jourHoraire, heureDebut, heureFin, StatutHoraire) VALUES 
+(1,"Lundi","8h00","9h00","Travail"),
+(2,"Lundi","9h00","10h00","Réunion")
+;
 --
 -- Contenu de la table planning
 --
 
-INSERT INTO `planning` (idPlanning,moisPlanning,anneePlanning,idSalarie,idHoraire) VALUES
+INSERT INTO `planning` (idPlanning, moisPlanning, anneePlanning, idSalarie, idHoraire) VALUES
 (1,"Mai","2014",1,1);
+
+--
+-- Contenu de la table poste
+--
+
+INSERT INTO `poste` (idPoste, libellePoste, lieuPoste, typePoste, descriptifPoste) VALUES
+(1,"Développeur PHP","Equipe Développement","Informatique","Développement HTML/CSS, Javascript, PHP..."),
+(2,"Chef de projet","Equipe Développement","Informatique","Cohésion de groupe");
