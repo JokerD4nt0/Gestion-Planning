@@ -55,26 +55,17 @@
 						<li <?php echoActiveClassIfRequestMatches("index.php?page=AccueilPrivee");?>>
 							<a href="index.php?page=AccueilPrivee">Accueil</a>
 						</li>
-						<!--<li 
-						<?php
-						// echoActiveClassIfRequestMatches("ajoutSalarie");
-						// echoActiveClassIfRequestMatches("modifSalarie");
-						// echoActiveClassIfRequestMatches("supprSalarie");
-						?> class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion du personnel <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-header">Ajout</li>
-									<li <?php //echoActiveClassIfRequestMatches("ajoutSalarie");?>><a href="ajoutSalarie.php">Ajouter un salarié</a></li>
-								
-								<li class="divider"></li>
-								<li class="dropdown-header">Modification</li>
-									<li <?php //echoActiveClassIfRequestMatches("modifSalarie");?>><a href="modifSalarie.php">Modification d'un salarié</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Suppression</li>
-									<li <?php //echoActiveClassIfRequestMatches("supprSalarie");?>><a href="supprSalarie.php">Suppression d'un salarié</a></li>
-							</ul>
-						</li>-->
 						<li <?php echoActiveClassIfRequestMatches("index.php?page=Planning");?>><a href="index.php?page=Planning">Planning</a></li>
+						<li <?php 
+						echoActiveClassIfRequestMatches("index.php?page=Conge");
+						echoActiveClassIfRequestMatches("index.php?page=Formation");
+						?> class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Demande <b class="caret"></b></a>
+							 <ul class="dropdown-menu">
+								<li <?php echoActiveClassIfRequestMatches("index.php?page=Conge");?>><a href="index.php?page=Conge">Congé</a></li>
+								<li <?php echoActiveClassIfRequestMatches("index.php?page=Formation");?>><a href="index.php?page=Formation">Formation</a></li>
+							 </ul>
+						</li>
 					</ul>
 					<ul class ="nav navbar-nav navbar-right">
 						<li>Bienvenue <?php echo $_SESSION['emailSalarie']?> !</li>
