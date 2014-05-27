@@ -12,7 +12,8 @@
 				'diplomesCandidat'=>$diplomesCandidat,
 				'posteSouhaiteCandidat'=>$posteSouhaiteCandidat
 			);
-			$requete = "INSERT INTO candidat(nomCandidat, prenomCandidat, emailCandidat, diplomesCandidat, posteSouhaiteCandidat) values (:nomCandidat,:prenomCandidat,:emailCandidat,:diplomesCandidat,:posteSouhaiteCandidat);"; 
+			$requete = "INSERT INTO candidat(nomCandidat, prenomCandidat, emailCandidat, diplomesCandidat, posteSouhaiteCandidat) 
+			VALUES (:nomCandidat,:prenomCandidat,:emailCandidat,:diplomesCandidat,:posteSouhaiteCandidat);"; 
 			return $this->executerRequete($requete,$parametres);
 		}
 		public function recupererCandidat()

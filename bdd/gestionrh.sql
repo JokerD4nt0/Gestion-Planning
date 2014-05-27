@@ -71,17 +71,13 @@ CREATE TABLE Demande(
 
 CREATE TABLE Conge(
         motifConge       Varchar (25) ,
-        commentaireConge Text (255) ,
-        idDemande        Int NOT NULL ,
-        PRIMARY KEY (idDemande )
+        commentaireConge Text (255) 
 )ENGINE=InnoDB;
 
 
 CREATE TABLE Formation(
         libelleFormation Varchar (25) ,
-        niveauFormation  Varchar (25) ,
-        idDemande        Int NOT NULL ,
-        PRIMARY KEY (idDemande )
+        niveauFormation  Varchar (25) 
 )ENGINE=InnoDB;
 
 
@@ -129,15 +125,15 @@ CREATE TABLE Horaire(
 
 ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
 ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
-ALTER TABLE Employe ADD CONSTRAINT FK_Employe_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
-ALTER TABLE Interimaire ADD CONSTRAINT FK_Interimaire_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+-- ALTER TABLE Employe ADD CONSTRAINT FK_Employe_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
+-- ALTER TABLE Interimaire ADD CONSTRAINT FK_Interimaire_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idHoraire FOREIGN KEY (idHoraire) REFERENCES Horaire(idHoraire);
 ALTER TABLE Rh ADD CONSTRAINT FK_Rh_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idRH FOREIGN KEY (idRH) REFERENCES Salarie(idSalarie);
-ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
-ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
+-- ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
+-- ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idCandidat FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
