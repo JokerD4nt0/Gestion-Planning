@@ -28,33 +28,6 @@
 	$contenu.= '</p></table><br/>';
 	$contenu.=
 	'
-		<legend>Vue sur les plannings hebdomadaire :</legend>
-		<table border=1>
-			<tr>
-				<td>Jour</td>
-				<td>Heure Début</td>
-				<td>Heure Fin</td>
-				<td>Statut Horaire</td>
-			</tr>
-	';
-	
-	foreach ($horaires as $tabHoraire)
-	{
-		$contenu.=
-		"
-			<p>
-				<tr>
-					<td>".$tabHoraire[1]."</td>
-					<td>".$tabHoraire[2]."</td>
-					<td>".$tabHoraire[3]."</td>
-					<td>".$tabHoraire[4]."</td>
-				</tr>
-		";
-	}
-	$contenu.= '</p></table><br/>';
-	
-	$contenu.=
-	'
 		<legend>Vue sur l\'emploi du temps :</legend>
 		<table border=1>
 			<tr>
