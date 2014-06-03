@@ -7,7 +7,7 @@
 					<label for="nomCandidat">Nom :</label>
 					<input type=text name="nomCandidat" placeholder="Nom" required /><br/>
 					<label>Prénom :</label>
-					<input type=text name="prenomCandidat" placeholder="Prénom" /><br/>
+					<input type=text name="prenomCandidat" placeholder="Prénom" required /><br/>
 					<label for="emailCandidat">Email :</label>
 					<input type=text name="emailCandidat" placeholder="Email" required /><br/>
 					<label for="diplomesCandidat">Diplôme(s) :</label>

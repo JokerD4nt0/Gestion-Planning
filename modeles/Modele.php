@@ -31,7 +31,13 @@
 			{            // Création de la connexion
 				try
 				{
-					$this->bdd = new PDO('mysql:host=localhost;dbname=gestionrh;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+					$this->bdd = new PDO
+					(
+						'mysql:host=localhost;dbname=gestionrh;charset=utf8',
+						'root',
+						'',
+						array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
+					);
 				}
 				catch(Exception $e)
 				{
