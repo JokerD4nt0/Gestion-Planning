@@ -28,7 +28,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='8h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
 			";
 			$reponse = $this->executerRequete($requete);
@@ -44,7 +44,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='9h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -60,7 +60,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='10h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -76,7 +76,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='11h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -92,7 +92,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='12h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -108,7 +108,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='13h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -124,7 +124,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='14h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -140,7 +140,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='15h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -156,7 +156,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='16h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -172,7 +172,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='17h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -188,7 +188,7 @@
 				WHERE jourHoraire='Lundi'
 				AND heureDebut='18h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -204,7 +204,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='8h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -220,7 +220,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='9h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -236,7 +236,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='10h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -252,7 +252,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='11h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -268,7 +268,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='12h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -284,7 +284,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='13h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -300,7 +300,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='14h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -316,7 +316,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='15h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -332,7 +332,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='16h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -348,7 +348,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='17h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -364,7 +364,7 @@
 				WHERE jourHoraire='Mardi'
 				AND heureDebut='18h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -380,7 +380,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='8h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -396,7 +396,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='9h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -412,7 +412,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='10h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -428,7 +428,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='11h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -444,7 +444,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='12h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -460,7 +460,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='13h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -476,7 +476,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='14h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -492,7 +492,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='15h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -508,7 +508,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='16h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -524,7 +524,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='17h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -540,7 +540,7 @@
 				WHERE jourHoraire='Mercredi'
 				AND heureDebut='18h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -556,7 +556,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='8h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -572,7 +572,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='9h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -588,7 +588,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='10h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -604,7 +604,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='11h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -620,7 +620,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='12h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -636,7 +636,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='13h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -652,7 +652,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='14h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -668,7 +668,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='15h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -684,7 +684,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='16h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -700,7 +700,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='17h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -716,7 +716,7 @@
 				WHERE jourHoraire='Jeudi'
 				AND heureDebut='18h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -732,7 +732,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='8h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -748,7 +748,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='9h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -764,7 +764,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='10h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -780,7 +780,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='11h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -796,7 +796,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='12h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -812,7 +812,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='13h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -828,7 +828,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='14h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -844,7 +844,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='15h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -860,7 +860,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='16h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -876,7 +876,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='17h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
@@ -892,7 +892,7 @@
 				WHERE jourHoraire='Vendredi'
 				AND heureDebut='18h00'
 				AND horaire.idPlanning=planning.idPlanning
-				AND planning.idSalarie=salarie.idSalarie
+				AND planning.idPlanning=salarie.idPlanning
 				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);

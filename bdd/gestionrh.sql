@@ -39,7 +39,6 @@ CREATE TABLE Planning(
         idPlanning    int (11) Auto_increment  NOT NULL ,
         moisPlanning  Varchar (25) ,
         anneePlanning Varchar (25) ,
-        idSalarie     Int ,
         PRIMARY KEY (idPlanning )
 )ENGINE=InnoDB;
 
@@ -120,18 +119,19 @@ CREATE TABLE Horaire(
 
 ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
 ALTER TABLE Salarie ADD CONSTRAINT FK_Salarie_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
--- ALTER TABLE Employe ADD CONSTRAINT FK_Employe_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
--- ALTER TABLE Interimaire ADD CONSTRAINT FK_Interimaire_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
-ALTER TABLE Planning ADD CONSTRAINT FK_Planning_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
--- ALTER TABLE Rh ADD CONSTRAINT FK_Rh_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Demande ADD CONSTRAINT FK_Demande_idRH FOREIGN KEY (idRH) REFERENCES Salarie(idSalarie);
--- ALTER TABLE Conge ADD CONSTRAINT FK_Conge_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
--- ALTER TABLE Formation ADD CONSTRAINT FK_Formation_idDemande FOREIGN KEY (idDemande) REFERENCES Demande(idDemande);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idPoste FOREIGN KEY (idPoste) REFERENCES Poste(idPoste);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idCandidat FOREIGN KEY (idCandidat) REFERENCES Candidat(idCandidat);
 ALTER TABLE Candidature ADD CONSTRAINT FK_Candidature_idSalarie FOREIGN KEY (idSalarie) REFERENCES Salarie(idSalarie);
 ALTER TABLE Horaire ADD CONSTRAINT FK_Horaire_idPlanning FOREIGN KEY (idPlanning) REFERENCES Planning(idPlanning);
+
+--
+-- Contenu de la table planning
+--
+
+INSERT INTO `planning` (idPlanning, moisPlanning, anneePlanning) VALUES
+(1,"Mai","2014");
 
 --
 -- Contenu de la table `salarie`
@@ -142,13 +142,6 @@ INSERT INTO `salarie` (`idSalarie`, `emailSalarie`, `mdpSalarie`, `nomSalarie`, 
 (2, 'adrien.morla66@gmail.com', '17d9cbc5f47611875ad06482b0b570d84b24278a', 'MORLA', 'Adrien', '0000-00-00', 'H', '', 0, '', 0, '2014-04-02', NULL, NULL),
 (3, 'sigerpreston@hotmail.com', '29c451be644da75cfd0a906bb8644f4bd8f3ef49', 'SIGER', 'Preston', '0000-00-00', 'H', '', 0, '', 0, '0000-00-00', NULL, NULL),
 (4, '', '', 'NGUYEN', 'Sophie', '0000-00-00', 'F', '', 0, '', 0, '0000-00-00', NULL, NULL);
-
---
--- Contenu de la table planning
---
-
-INSERT INTO `planning` (idPlanning, moisPlanning, anneePlanning, idSalarie) VALUES
-(1,"Mai","2014",1);
 
 --
 -- Contenu de la table `horaire`
