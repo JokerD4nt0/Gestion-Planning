@@ -14,9 +14,14 @@
 	
 	If(!empty($_POST))
 	{
-		$emailSalarie = $_POST["emailSalarie"];
+		$idSalarie = $_POST["idSalarie"];
+
 		$mdpSalarie = sha1($_POST["mdpSalarie"]."c3R".TRUE);
-		$sql = "SELECT * FROM salarie WHERE emailSalarie='".$emailSalarie."' AND mdpSalarie='".$mdpSalarie."'";
+		$sql = "SELECT * FROM salarie
+		WHERE idSalarie='".$idSalarie."'
+
+		AND mdpSalarie='".$mdpSalarie."'
+		";
 		$request = mysqli_query($connexion, $sql);
 		
 		If(mysqli_num_rows($request) == 0)
@@ -26,7 +31,7 @@
 		Else
 		{
 			Session_start();
-			$_SESSION["emailSalarie"] = $emailSalarie;
+			$_SESSION["idSalarie"] = $idSalarie;
 			header("Location:index.php?page=AccueilPrivee");
 		}
 	}

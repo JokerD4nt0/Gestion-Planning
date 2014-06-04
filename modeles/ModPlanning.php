@@ -1,16 +1,20 @@
 <?php
-	require_once"Planning.php";
+	// require_once"Planning.php";
 	require_once"Horaire.php";
 	
 	try
 	{
-		$bdd = new Planning;
-		$plannings = array();
-		$plannings = $bdd->recupererPlanning();
+		// $bdd= new Salarie;
+		// $salaries = array();
+		// $salaries = $bdd->recupererSessionSalarie();
+		
+		// $bdd = new Planning;
+		// $plannings = array();
+		// $plannings = $bdd->recupererPlanning();
 		
 		$bdd = new Horaire;
 		$horaires = array();
-		$horaires = $bdd->recupererHoraire();
+		// $horaires = $bdd->recupererHoraire();
 		$horairesLundi8h = $bdd->recupererLundi8h();
 		$horairesLundi9h = $bdd->recupererLundi9h();
 		$horairesLundi10h = $bdd->recupererLundi10h();

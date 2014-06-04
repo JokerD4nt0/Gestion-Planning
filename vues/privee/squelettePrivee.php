@@ -1,6 +1,3 @@
-<?php
-	require_once"session.php";
-?>
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -68,7 +65,7 @@
 						</li>
 					</ul>
 					<ul class ="nav navbar-nav navbar-right">
-						<li>Bienvenue <?php echo $_SESSION['emailSalarie']?> !</li>
+						<li>Votre identifiant : <?php echo $_SESSION['idSalarie'];?></li>
 						<li>
 							<a href="vues/privee/sessionDestroy.php">Déconnexion</a>
 						</li>

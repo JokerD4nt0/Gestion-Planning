@@ -2,32 +2,6 @@
 	$titre="Plannings";
 	$contenu=
 	'
-		<legend>Vue sur les plannings annuels :</legend>
-		<table border=1>
-			<tr>
-				<td>Nom du Salarié</td>
-				<td>Prénom du Salarié</td>
-				<td>Mois</td>
-				<td>Année</td>
-			</tr>
-	';
-	
-	foreach ($plannings as $tabPlanning)
-	{
-		$contenu.=
-		"
-			<p>
-				<tr>
-					<td>".$tabPlanning[2]."</td>
-					<td>".$tabPlanning[3]."</td>
-					<td>".$tabPlanning[0]."</td>
-					<td>".$tabPlanning[1]."</td>
-				</tr>
-		";
-	}
-	$contenu.= '</p></table><br/>';
-	$contenu.=
-	'
 		<legend>Vue sur l\'emploi du temps :</legend>
 		<table border=1>
 			<tr>

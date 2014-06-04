@@ -6,8 +6,7 @@
 		{
 			$requete =
 			"
-				SELECT moisPlanning, anneePlanning, nomSalarie, prenomSalarie FROM planning, salarie
-				WHERE planning.idSalarie=salarie.idSalarie
+				SELECT * FROM planning;
 			"; 
 			$reponse = $this->executerRequete($requete);
 			$planning=array();
@@ -15,10 +14,10 @@
 			{
 				$planning[]=array
 				(
+					$donnees['idPlanning'],
 					$donnees['moisPlanning'],
 					$donnees['anneePlanning'],
-					$donnees['nomSalarie'],
-					$donnees['prenomSalarie']
+					$donnees['idSalarie']
 				);
 			}
 			return $planning;

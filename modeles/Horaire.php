@@ -2,31 +2,34 @@
 	require_once 'Modele.php';
 	class Horaire extends Modele
 	{
-		public function recupererHoraire()
-		{
-			$requete = " SELECT * FROM horaire;"; 
-			$reponse = $this->executerRequete($requete);
-			$horaire=array();
-			while($donnees = $reponse->fetch())
-			{
-				$horaire[]=array
-				(
-					$donnees['idHoraire'],
-					$donnees['jourHoraire'],
-					$donnees['heureDebut'],
-					$donnees['heureFin'],
-					$donnees['statutHoraire']		
-				);
-			}
-			return $horaire;
-		}
+		// public function recupererHoraire()
+		// {
+			// $requete = " SELECT * FROM horaire;"; 
+			// $reponse = $this->executerRequete($requete);
+			// $horaire=array();
+			// while($donnees = $reponse->fetch())
+			// {
+				// $horaire[]=array
+				// (
+					// $donnees['idHoraire'],
+					// $donnees['jourHoraire'],
+					// $donnees['heureDebut'],
+					// $donnees['heureFin'],
+					// $donnees['statutHoraire']		
+				// );
+			// }
+			// return $horaire;
+		// }
 		public function recupererLundi8h()
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='8h00';
+				AND heureDebut='8h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -37,9 +40,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='9h00';
+				AND heureDebut='9h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -50,9 +56,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='10h00';
+				AND heureDebut='10h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -63,9 +72,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='11h00';
+				AND heureDebut='11h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -76,9 +88,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='12h00';
+				AND heureDebut='12h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -89,9 +104,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='13h00';
+				AND heureDebut='13h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -102,9 +120,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='14h00';
+				AND heureDebut='14h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -115,9 +136,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='15h00';
+				AND heureDebut='15h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -128,9 +152,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='16h00';
+				AND heureDebut='16h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -141,9 +168,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='17h00';
+				AND heureDebut='17h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -154,9 +184,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Lundi'
-				AND heureDebut='18h00';
+				AND heureDebut='18h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -167,9 +200,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='8h00';
+				AND heureDebut='8h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -180,9 +216,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='9h00';
+				AND heureDebut='9h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -193,9 +232,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='10h00';
+				AND heureDebut='10h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -206,9 +248,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='11h00';
+				AND heureDebut='11h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -219,9 +264,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='12h00';
+				AND heureDebut='12h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -232,9 +280,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='13h00';
+				AND heureDebut='13h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -245,9 +296,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='14h00';
+				AND heureDebut='14h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -258,9 +312,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='15h00';
+				AND heureDebut='15h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -271,9 +328,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='16h00';
+				AND heureDebut='16h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -284,9 +344,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='17h00';
+				AND heureDebut='17h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -297,9 +360,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mardi'
-				AND heureDebut='18h00';
+				AND heureDebut='18h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -310,9 +376,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='8h00';
+				AND heureDebut='8h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -323,9 +392,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='9h00';
+				AND heureDebut='9h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -336,9 +408,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='10h00';
+				AND heureDebut='10h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -349,9 +424,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='11h00';
+				AND heureDebut='11h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -362,9 +440,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='12h00';
+				AND heureDebut='12h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -375,9 +456,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='13h00';
+				AND heureDebut='13h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -388,9 +472,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='14h00';
+				AND heureDebut='14h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -401,9 +488,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='15h00';
+				AND heureDebut='15h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -414,9 +504,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='16h00';
+				AND heureDebut='16h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -427,9 +520,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='17h00';
+				AND heureDebut='17h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -440,9 +536,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Mercredi'
-				AND heureDebut='18h00';
+				AND heureDebut='18h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -453,9 +552,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='8h00';
+				AND heureDebut='8h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -466,9 +568,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='9h00';
+				AND heureDebut='9h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -479,9 +584,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='10h00';
+				AND heureDebut='10h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -492,9 +600,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='11h00';
+				AND heureDebut='11h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -505,9 +616,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='12h00';
+				AND heureDebut='12h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -518,9 +632,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='13h00';
+				AND heureDebut='13h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -531,9 +648,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='14h00';
+				AND heureDebut='14h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -544,9 +664,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='15h00';
+				AND heureDebut='15h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -557,9 +680,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='16h00';
+				AND heureDebut='16h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -570,9 +696,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='17h00';
+				AND heureDebut='17h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -583,9 +712,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Jeudi'
-				AND heureDebut='18h00';
+				AND heureDebut='18h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -596,9 +728,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='8h00';
+				AND heureDebut='8h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -609,9 +744,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='9h00';
+				AND heureDebut='9h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -622,9 +760,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='10h00';
+				AND heureDebut='10h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -635,9 +776,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='11h00';
+				AND heureDebut='11h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -648,9 +792,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='12h00';
+				AND heureDebut='12h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -661,9 +808,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='13h00';
+				AND heureDebut='13h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -674,9 +824,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='14h00';
+				AND heureDebut='14h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -687,9 +840,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='15h00';
+				AND heureDebut='15h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -700,9 +856,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='16h00';
+				AND heureDebut='16h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -713,9 +872,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='17h00';
+				AND heureDebut='17h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
@@ -726,9 +888,12 @@
 		{
 			$requete =
 			"
-				SELECT statutHoraire FROM horaire
+				SELECT statutHoraire FROM horaire, planning, salarie
 				WHERE jourHoraire='Vendredi'
-				AND heureDebut='18h00';
+				AND heureDebut='18h00'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idSalarie=salarie.idSalarie
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";				;
 			";
 			$reponse = $this->executerRequete($requete);
 			$donnees = $reponse->fetch();
