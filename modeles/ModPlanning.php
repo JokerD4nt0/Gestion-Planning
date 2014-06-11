@@ -15,6 +15,12 @@
 		$bdd = new Horaire;
 		$horaires = array();
 		// $horaires = $bdd->recupererHoraire();
+		
+		$nombreHeuresTravail = $bdd->nombreHeuresTravail();
+		$nombreHeuresReunion = $bdd->nombreHeuresReunion();
+		$nombreHeuresPauseDej = $bdd->nombreHeuresPauseDej();
+		$nombreHeuresNonAffecte = $bdd->nombreHeuresNonAffecte();
+		
 		$horairesLundi8h = $bdd->recupererLundi8h();
 		$horairesLundi9h = $bdd->recupererLundi9h();
 		$horairesLundi10h = $bdd->recupererLundi10h();

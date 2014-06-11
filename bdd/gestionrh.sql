@@ -204,7 +204,6 @@ INSERT INTO `horaire` (`idHoraire`, `jourHoraire`, `heureDebut`, `heureFin`, `st
 (54, 'Vendredi', '17h00', '18h00', '', 1),
 (55, 'Vendredi', '18h00', '19h00', '',1);
 
-
 --
 -- Contenu de la table poste
 --

@@ -101,6 +101,27 @@
 				<td>'.$horairesVendredi18h.'</td>
 			</tr>
 		</table>
+		
+		<br/><br/>
+		<legend>Vue sur le nombre des status horaires :</legend>
+		<table border=1>
+			<tr>
+				<td>Nombre d\'heures de travail</td>
+				<td>'.$nombreHeuresTravail.'</td>
+			</tr>
+			<tr>
+				<td>Nombre d\'heures de réunion</td>
+				<td>'.$nombreHeuresReunion.'</td>
+			</tr>
+			<tr>
+				<td>Nombre d\'heures de pause déjeuner</td>
+				<td>'.$nombreHeuresPauseDej.'</td>
+			</tr>
+			<tr>
+				<td>Nombre d\'heures de non-affectation</td>
+				<td>'.$nombreHeuresNonAffecte.'</td>
+			</tr>
+		</table>
 	';
 	require_once'squelettePrivee.php';
 ?>

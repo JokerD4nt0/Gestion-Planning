@@ -20,6 +20,73 @@
 			// }
 			// return $horaire;
 		// }
+		
+		public function nombreHeuresTravail()
+		{
+			$requete =
+			"
+				SELECT COUNT(statutHoraire) FROM horaire, planning, salarie
+				WHERE statutHoraire='Travail'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idPlanning=salarie.idPlanning
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
+			";
+			$reponse = $this->executerRequete($requete);
+			$donnees = $reponse->fetch();
+			$nombreHeuresTravail =$donnees['COUNT(statutHoraire)'];
+			return $nombreHeuresTravail;
+		}
+		
+		public function nombreHeuresReunion()
+		{
+			$requete =
+			"
+				SELECT COUNT(statutHoraire) FROM horaire, planning, salarie
+				WHERE statutHoraire='Réunion'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idPlanning=salarie.idPlanning
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
+			";
+			$reponse = $this->executerRequete($requete);
+			$donnees = $reponse->fetch();
+			$nombreHeuresReunion =$donnees['COUNT(statutHoraire)'];
+			return $nombreHeuresReunion;
+		}
+		
+		public function nombreHeuresPauseDej()
+		{
+			$requete =
+			"
+				SELECT COUNT(statutHoraire) FROM horaire, planning, salarie
+				WHERE statutHoraire='Pause Déjeuner'
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idPlanning=salarie.idPlanning
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
+			";
+			$reponse = $this->executerRequete($requete);
+			$donnees = $reponse->fetch();
+			$nombreHeuresPauseDej =$donnees['COUNT(statutHoraire)'];
+			return $nombreHeuresPauseDej;
+		}
+		
+		public function nombreHeuresNonAffecte()
+		{
+			$requete =
+			"
+				SELECT COUNT(statutHoraire) FROM horaire, planning, salarie
+				WHERE statutHoraire=''
+				AND horaire.idPlanning=planning.idPlanning
+				AND planning.idPlanning=salarie.idPlanning
+				AND salarie.idSalarie=".$_SESSION['idSalarie'].";
+			";
+			$reponse = $this->executerRequete($requete);
+			$donnees = $reponse->fetch();
+			$nombreHeuresNonAffecte =$donnees['COUNT(statutHoraire)'];
+			return $nombreHeuresNonAffecte;
+		}
+		
+		
+		
 		public function recupererLundi8h()
 		{
 			$requete =

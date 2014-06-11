@@ -1,7 +1,3 @@
--- Mettre les triggers ici
-
-
-
 -- Création d'un trigger qui crée automatiquement un planning aprés l'ajout d'un salarié (voir en dessous)
 DELIMITER //
 CREATE TRIGGER new_planning
@@ -24,7 +20,7 @@ DELIMITER ;
 
 
 
--- Création d'un trigger qui crée automatiquement une horraire aprés l'ajout d'un planning 
+-- Création d'un trigger qui crée automatiquement une horaire aprés l'ajout d'un planning 
 DELIMITER //
 CREATE TRIGGER new_horaire
 AFTER INSERT ON planning
