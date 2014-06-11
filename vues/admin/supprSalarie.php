@@ -1,8 +1,8 @@
 <?php
-	include_once"../include/session.php";
-	include_once"../include/connectBDD.php";
-	include_once"../include/header.php";
-	include_once"../include/navbar.php";
+	include_once"/include/session.php";
+	include_once"/include/connectBDD.php";
+	include_once"/include/header.php";
+	include_once"/include/navbar.php";
 ?>
 
 
@@ -11,7 +11,7 @@
 		<h1>Supprimer un Salarié</h1>
 		<legend>Liste des salariés : </legend>
 			<?php
-				require_once "../include/connectBDD_define.php";
+				require_once "/include/connectBDD_define.php";
 				mysql_connect(DB_HOST,DB_LOGIN,DB_PASS);
 				mysql_select_db(DB_BDD);
 				$sql="SELECT * FROM salarie ";
@@ -34,6 +34,6 @@
 	</div>
 		
 <?php 
-	include_once"../include/javascript.php";
-	include_once"../include/footer.php"; 
+	include_once"/include/javascript.php";
+	include_once"/include/footer.php"; 
 ?>

@@ -1,8 +1,8 @@
 <?php
-	include_once"../include/session.php";
-	include_once"../include/connectBDD.php";
-	include_once"../include/header.php";
-	include_once"../include/navbar.php";
+	include_once"/include/session.php";
+	include_once"/include/connectBDD.php";
+	include_once"/include/header.php";
+	include_once"/include/navbar.php";
 ?>
 
 <!-- Contenu -->
@@ -65,6 +65,6 @@ Quand on rentre l'ID d'un salarié, son planning se génère automatiquement pui
 	<a href="accueil.php" class="btn btn-primary">Retour à l'accueil</a>		
 </div>
 <?php 
-	include_once"../include/javascript.php";
-	include_once"../include/footer.php"; 
+	include_once"/include/javascript.php";
+	include_once"/include/footer.php"; 
 ?>

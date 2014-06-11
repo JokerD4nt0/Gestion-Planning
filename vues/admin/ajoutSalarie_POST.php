@@ -1,6 +1,6 @@
 <?php
-	include_once "../include/header.php";
-	include_once "../include/connectBDD.php";
+	include_once "/include/header.php";
+	include_once "/include/connectBDD.php";
 	if($_POST['mdpSalarie'] == $_POST['confirmMdpSalarie'])
 	{
 		$requete = $bdd->prepare('INSERT INTO salarie

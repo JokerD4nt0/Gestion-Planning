@@ -1,5 +1,6 @@
 <?php
 	require_once 'Modele.php';
+	
 	class Salarie extends Modele
 	{
 		public function recupererSalarie()

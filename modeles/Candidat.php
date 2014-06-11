@@ -1,5 +1,6 @@
 <?php
 	require_once 'Modele.php';
+	
 	class Candidat extends Modele
 	{
 		public function ajouterCandidat($nomCandidat,$prenomCandidat,$emailCandidat,$diplomesCandidat,$posteSouhaiteCandidat)

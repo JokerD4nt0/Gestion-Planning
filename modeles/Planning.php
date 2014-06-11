@@ -1,5 +1,6 @@
 <?php
 	require_once 'Modele.php';
+	
 	class Planning extends Modele
 	{
 		public function recupererPlanning()

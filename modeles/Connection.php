@@ -13,18 +13,13 @@
 			}
 		}
 		
-		public function connexion()
+		public function connectBDD_define()
 		{
-			$serveur = "localhost";
-			$log_connect = "root";
-			$pass_connect = "";
-			$database = "gestionrh";
-			
-			$connexion = mysqli_connect($serveur, $log_connect, $pass_connect, $database);
-			mysqli_query($connexion,"SET NAME UTF8");
-			return($connexion);	
+			define("DB_HOST","localhost");
+			define("DB_LOGIN","root");
+			define("DB_PASS","");
+			define("DB_BDD","gestionrh");
 		}
-		$connexion = connexion();
 		
 		public function authentification($emailSalarie,$mdpSalarie)
 		{
@@ -51,14 +46,6 @@
 			elseif (isset($_GET["erreur"])){
 				echo("<span id=\"erreur\">Accès interdit</span><br />");
 			}
-		}
-		
-		public function connectBDD_define()
-		{
-			define("DB_HOST","localhost");
-			define("DB_LOGIN","root");
-			define("DB_PASS","");
-			define("DB_BDD","gestionrh");
 		}
 	}
 ?>

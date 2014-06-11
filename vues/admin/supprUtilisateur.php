@@ -1,7 +1,7 @@
 <?php
-	include_once"../include/session.php";
-	include_once"../include/header.php";
-	include_once"../include/navbar.php";
+	include_once"/include/session.php";
+	include_once"/include/header.php";
+	include_once"/include/navbar.php";
 ?>
 
 
@@ -10,7 +10,7 @@
 		<legend>Supprimer un Utilisateur</legend>
 		<h1>Liste des utilisateurs :</h1>
 			<?php
-				require_once "../include/connectBDD_define.php";
+				require_once "/include/connectBDD_define.php";
 				mysql_connect(DB_HOST,DB_LOGIN,DB_PASS);
 				mysql_select_db(DB_BDD);
 				$sql="SELECT * FROM authentifiant";
@@ -34,6 +34,6 @@
 		
 		
 <?php 
-	include_once"../include/javascript.php";
-	include_once"../include/footer.php"; 
+	include_once"/include/javascript.php";
+	include_once"/include/footer.php"; 
 ?>

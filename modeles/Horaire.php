@@ -1,5 +1,6 @@
 <?php
 	require_once 'Modele.php';
+	
 	class Horaire extends Modele
 	{
 		// public function recupererHoraire()

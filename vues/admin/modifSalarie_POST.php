@@ -1,6 +1,6 @@
 <?php
-	include_once"../include/header.php";
-	include_once"../include/connectBDD.php";
+	include_once"/include/header.php";
+	include_once"/include/connectBDD.php";
 	
 	$requete = $bdd->prepare(
 	"

@@ -14,8 +14,7 @@
 				$_POST['dureeFormation_Conge']
 			);
 		}
-	
-			
+		
 		$bddFormation=new Formation;
 		if(isset($_POST['libelleFormation']))
 		{

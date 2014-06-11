@@ -1,5 +1,6 @@
 <?php
 	require_once 'Modele.php';
+	
 	class Poste extends Modele
 	{
 		public function recupererPoste()
